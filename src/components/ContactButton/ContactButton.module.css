@@ -1,0 +1,16 @@
+.contact__btn {
+  min-height: 55px;
+  padding: 0 26px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f47b35;
+  color: #17191b;
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.contact__btn:hover {
+  background-color: #ff8b45;
+}
