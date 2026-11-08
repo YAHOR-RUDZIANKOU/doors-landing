@@ -1,0 +1,4353 @@
+{
+  "meta": {
+    "source": "Каталоги и гиды «Стальная линия» (docs/)",
+    "note": "swatchHex — медиана цвета с фото, приблизительно. null — в материалах нет данных."
+  },
+  "series": {
+    "73": {
+      "purpose": "стандартная: тамбур или квартира с низкими требованиями к герметичности",
+      "metalLeafMm": 1.0,
+      "metalFrameMm": 1.0,
+      "leafThicknessMm": 97,
+      "frameThicknessMm": 120,
+      "panelInsideMm": 12,
+      "panelOutsideMm": 12,
+      "seals": 2,
+      "sealsDescription": "каучуковый D",
+      "insulationLeaf": "1 слой минеральной ваты, 50 мм",
+      "insulationFrame": "минеральная вата",
+      "thermalBreak": false,
+      "noiseDbMin": 35,
+      "options": "1П",
+      "note": "Снаружи царговый щит 16 мм"
+    },
+    "ВН-80-ЕС": {
+      "purpose": "внутреннего открывания, с низким порогом",
+      "metalLeafMm": 1.2,
+      "metalFrameMm": 1.2,
+      "leafThicknessMm": 90,
+      "frameThicknessMm": 94,
+      "panelInsideMm": 12,
+      "panelOutsideMm": 12,
+      "seals": 2,
+      "sealsDescription": "каучуковый D + комбинированный",
+      "insulationLeaf": "2 слоя минеральной ваты, 100 мм",
+      "insulationFrame": "минеральная вата + фольгированный порилекс",
+      "thermalBreak": false,
+      "noiseDbMin": 35,
+      "options": "1П",
+      "note": null
+    },
+    "82": {
+      "purpose": "улучшенная двухконтурная",
+      "metalLeafMm": 1.2,
+      "metalFrameMm": 1.2,
+      "leafThicknessMm": 97,
+      "frameThicknessMm": 120,
+      "panelInsideMm": 12,
+      "panelOutsideMm": 12,
+      "seals": 2,
+      "sealsDescription": "каучуковый D + комбинированный",
+      "insulationLeaf": "2 слоя минеральной ваты, 100 мм",
+      "insulationFrame": "минеральная вата + фольгированный порилекс",
+      "thermalBreak": false,
+      "noiseDbMin": 35,
+      "options": "1П / 1,5П / 2П",
+      "note": null
+    },
+    "94": {
+      "purpose": "трехконтурная, улучшенная защита от шума и запахов",
+      "metalLeafMm": 1.2,
+      "metalFrameMm": 1.2,
+      "leafThicknessMm": 94,
+      "frameThicknessMm": 120,
+      "panelInsideMm": 16,
+      "panelOutsideMm": 12,
+      "seals": 3,
+      "sealsDescription": "каучуковые D",
+      "insulationLeaf": "2 слоя минеральной ваты, 100 мм",
+      "insulationFrame": "минеральная вата + фольгированный порилекс",
+      "thermalBreak": false,
+      "noiseDbMin": 35,
+      "options": "1П / 1,5П",
+      "note": null
+    },
+    "95": {
+      "purpose": "трехконтурная утолщенная, усиленная взломостойкость",
+      "metalLeafMm": 1.2,
+      "metalFrameMm": 1.2,
+      "leafThicknessMm": 118,
+      "frameThicknessMm": 130,
+      "panelInsideMm": 16,
+      "panelOutsideMm": 12,
+      "seals": 3,
+      "sealsDescription": "каучуковые D",
+      "insulationLeaf": "2 слоя минеральной ваты, 100 мм",
+      "insulationFrame": "минеральная вата + фольгированный порилекс",
+      "thermalBreak": false,
+      "noiseDbMin": 35,
+      "options": "1П; в базе роторный замок Securemme 2650",
+      "note": null
+    },
+    "100": {
+      "purpose": "четырехконтурная шумоизоляционная, усиленная конструкция",
+      "metalLeafMm": 1.5,
+      "metalFrameMm": 1.5,
+      "leafThicknessMm": 100,
+      "frameThicknessMm": 124,
+      "panelInsideMm": 16,
+      "panelOutsideMm": 16,
+      "seals": 4,
+      "sealsDescription": "1 каучуковый D + 3 комбинированных",
+      "insulationLeaf": "2 слоя минеральной ваты, 100 мм",
+      "insulationFrame": "минеральная вата + фольгированный порилекс",
+      "thermalBreak": false,
+      "noiseDbMin": 40,
+      "options": "В базе петли D22; 1П / 1,5П / 2П / 2П+1,5П",
+      "note": null
+    },
+    "ВН-101-ЕС": {
+      "purpose": "внутреннего открывания, усиленная, с низким порогом",
+      "metalLeafMm": 1.2,
+      "metalFrameMm": 1.5,
+      "leafThicknessMm": 106,
+      "frameThicknessMm": 94,
+      "panelInsideMm": 12,
+      "panelOutsideMm": 12,
+      "seals": 3,
+      "sealsDescription": "каучуковый D + комбинированный",
+      "insulationLeaf": "2 слоя минеральной ваты, 100 мм",
+      "insulationFrame": "минеральная вата + фольгированный порилекс",
+      "thermalBreak": false,
+      "noiseDbMin": 35,
+      "options": "В базе петли D22; 1П / 1,5П / 2П / 2П+1,5П",
+      "note": null
+    },
+    "73У": {
+      "purpose": "стандартная: тамбур",
+      "metalLeafMm": 1.0,
+      "metalFrameMm": 1.0,
+      "leafThicknessMm": 97,
+      "frameThicknessMm": 120,
+      "panelInsideMm": 12,
+      "panelOutsideMm": 12,
+      "seals": 2,
+      "sealsDescription": "каучуковый D",
+      "insulationLeaf": "1 слой минеральной ваты, 50 мм",
+      "insulationFrame": "минеральная вата",
+      "thermalBreak": false,
+      "noiseDbMin": null,
+      "options": "1П",
+      "note": "Снаружи царговый щит 16 мм; герметизация стыков, антикоррозионная обработка"
+    },
+    "82У": {
+      "purpose": "улучшенная двухконтурная, с тамбуром",
+      "metalLeafMm": 1.2,
+      "metalFrameMm": 1.2,
+      "leafThicknessMm": 97,
+      "frameThicknessMm": 120,
+      "panelInsideMm": 12,
+      "panelOutsideMm": 12,
+      "seals": 2,
+      "sealsDescription": "каучуковый D + комбинированный",
+      "insulationLeaf": "2 слоя минеральной ваты, 100 мм",
+      "insulationFrame": "минеральная вата + фольгированный порилекс",
+      "thermalBreak": false,
+      "noiseDbMin": null,
+      "options": "1П с доборами и фрамугой / 2П; окна",
+      "note": "Герметизация стыков, антикоррозионная обработка"
+    },
+    "94У": {
+      "purpose": "трехконтурная, с тамбуром",
+      "metalLeafMm": 1.2,
+      "metalFrameMm": 1.2,
+      "leafThicknessMm": 94,
+      "frameThicknessMm": 120,
+      "panelInsideMm": 16,
+      "panelOutsideMm": 12,
+      "seals": 3,
+      "sealsDescription": "каучуковые D",
+      "insulationLeaf": "2 слоя минеральной ваты, 100 мм",
+      "insulationFrame": "минеральная вата + фольгированный порилекс",
+      "thermalBreak": false,
+      "noiseDbMin": null,
+      "options": "1П с доборами и фрамугой; окна",
+      "note": "Герметизация стыков, антикоррозионная обработка"
+    },
+    "95У": {
+      "purpose": "трехконтурная утолщенная, усиленная взломостойкость",
+      "metalLeafMm": 1.2,
+      "metalFrameMm": 1.2,
+      "leafThicknessMm": 118,
+      "frameThicknessMm": 130,
+      "panelInsideMm": 16,
+      "panelOutsideMm": 12,
+      "seals": 3,
+      "sealsDescription": "каучуковые D",
+      "insulationLeaf": "2 слоя минеральной ваты, 100 мм",
+      "insulationFrame": "минеральная вата + фольгированный порилекс",
+      "thermalBreak": false,
+      "noiseDbMin": null,
+      "options": "1П; в базе замки Fuaro Termo V-25/S + V-25/C, 4 класс",
+      "note": "Герметизация стыков, антикоррозионная обработка"
+    },
+    "100У": {
+      "purpose": "четырехконтурная усиленная, с тамбуром",
+      "metalLeafMm": 1.5,
+      "metalFrameMm": 1.5,
+      "leafThicknessMm": 100,
+      "frameThicknessMm": 124,
+      "panelInsideMm": 16,
+      "panelOutsideMm": 16,
+      "seals": 4,
+      "sealsDescription": "1 каучуковый D + 3 комбинированных",
+      "insulationLeaf": "2 слоя минеральной ваты, 100 мм",
+      "insulationFrame": "минеральная вата + фольгированный порилекс",
+      "thermalBreak": "conditional",
+      "noiseDbMin": null,
+      "options": "В базе петли D22, порог с накладкой из н/ж стали; 1П / 2П с доборами и фрамугой; окна",
+      "note": "терморазрыв при скрытом креплении панели, без молдингов"
+    },
+    "92УТ": {
+      "purpose": "дом без тамбура: усиленная, защита от промерзания",
+      "metalLeafMm": 1.2,
+      "metalFrameMm": 1.5,
+      "leafThicknessMm": 100,
+      "frameThicknessMm": 113,
+      "panelInsideMm": 12,
+      "panelOutsideMm": 12,
+      "seals": 3,
+      "sealsDescription": "каучуковые D",
+      "insulationLeaf": "минеральная плита + фольгированный порилекс + минеральная вата, термовставка",
+      "insulationFrame": "двойная коробка с терморамкой: минеральная вата + фольгированный порилекс, термовставка",
+      "thermalBreak": true,
+      "noiseDbMin": null,
+      "options": "Петли D22 за доплату; окно; 1,5П; оцинкованная сталь",
+      "note": null
+    },
+    "93УТ": {
+      "purpose": "дом без тамбура: утолщенная, защита от промерзания",
+      "metalLeafMm": 1.2,
+      "metalFrameMm": 1.5,
+      "leafThicknessMm": 128,
+      "frameThicknessMm": 144,
+      "panelInsideMm": 12,
+      "panelOutsideMm": 16,
+      "seals": 3,
+      "sealsDescription": "каучуковые D",
+      "insulationLeaf": "минеральная плита + фольгированный порилекс + минеральная вата, термовставка",
+      "insulationFrame": "двойная коробка с терморамкой: минеральная вата + фольгированный порилекс, термовставка",
+      "thermalBreak": true,
+      "noiseDbMin": null,
+      "options": "Петли D22 за доплату; окно; 1,5П; оцинкованная сталь",
+      "note": null
+    },
+    "100УТ": {
+      "purpose": "дом без тамбура: четырехконтурная, два терморазрыва",
+      "metalLeafMm": 1.5,
+      "metalFrameMm": 1.5,
+      "leafThicknessMm": 100,
+      "frameThicknessMm": 124,
+      "panelInsideMm": 16,
+      "panelOutsideMm": 16,
+      "seals": 4,
+      "sealsDescription": "1 каучуковый D + 3 комбинированных",
+      "insulationLeaf": "минеральная плита + фольгированный порилекс + минеральная вата; терморазрыв при скрытом креплении панели, без молдингов",
+      "insulationFrame": "двойная коробка с терморамкой: минеральная вата + фольгированный порилекс, термовставка",
+      "thermalBreak": true,
+      "noiseDbMin": null,
+      "options": "В базе петли D22; 1,5П / 2П / 2П+1,5П; окно; оцинкованная сталь",
+      "note": null
+    },
+    "Хаски Light": {
+      "purpose": "базовая, подсобные помещения",
+      "leafThicknessMm": 66,
+      "frameThicknessMm": 64,
+      "insulationLeaf": "пенополистирол",
+      "insulationFrame": "пенополистирол",
+      "thermalBreakLeaf": true,
+      "thermalBreakFrame": false,
+      "thresholdSteelCover": true,
+      "seals": 2,
+      "sealsDescription": "Cyclone D: 1 в полотне, 1 в коробке",
+      "glazing": "3-камерный",
+      "source": "3 Каталог Хаски 2025"
+    },
+    "Хаски A": {
+      "purpose": "базовая теплая, вход с тамбуром",
+      "leafThicknessMm": 77,
+      "frameThicknessMm": 76,
+      "insulationLeaf": "пенополистирол",
+      "insulationFrame": "клееный брус",
+      "thermalBreakLeaf": true,
+      "thermalBreakFrame": true,
+      "thresholdSteelCover": true,
+      "seals": 2,
+      "sealsDescription": "каучуковый D: 1 в полотне, 1 в коробке",
+      "glazing": "3-камерный",
+      "source": "2. Гид Хаски 2026"
+    },
+    "Хаски B": {
+      "purpose": "теплая, усиленные полотно и коробка, вход с тамбуром",
+      "leafThicknessMm": 77,
+      "frameThicknessMm": 76,
+      "insulationLeaf": "пенополистирол",
+      "insulationFrame": "клееный брус",
+      "thermalBreakLeaf": true,
+      "thermalBreakFrame": true,
+      "thresholdSteelCover": true,
+      "seals": 3,
+      "sealsDescription": "каучуковый D: 2 в полотне, 1 в коробке",
+      "glazing": "3-камерный",
+      "source": "2. Гид Хаски 2026"
+    },
+    "Хаски PRO": {
+      "purpose": "максимальная защита от промерзания, парадный вход без тамбура",
+      "leafThicknessMm": 84,
+      "frameThicknessMm": 91,
+      "insulationLeaf": "пенополистирол",
+      "insulationFrame": "клееный брус",
+      "thermalBreakLeaf": "2 термовставки",
+      "thermalBreakFrame": true,
+      "thresholdSteelCover": true,
+      "seals": 3,
+      "sealsDescription": "каучуковый D: 2 в полотне, 1 в коробке",
+      "glazing": "4-камерный",
+      "source": "2. Гид Хаски 2026"
+    }
+  },
+  "doors": [
+    {
+      "id": "bronks",
+      "name": "Бронкс",
+      "kind": "entrance",
+      "line": "steel",
+      "purpose": "apartment",
+      "style": "modern",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "73",
+        "82",
+        "94",
+        "100"
+      ],
+      "defaultSeries": "100",
+      "gallery": {
+        "interior": {
+          "image": "/doors/bronks/interior.jpg",
+          "imageSize": [
+            1877,
+            1036
+          ]
+        },
+        "detail": null
+      },
+      "variants": [
+        {
+          "id": "bronks-v1",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "CV2.П-30.1",
+            "baguette": null,
+            "raw": "Soft Touch «Дымчатый кашемир»",
+            "material": "Soft Touch",
+            "color": "Дымчатый кашемир",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bronks/v1-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#68635F"
+          },
+          "inside": {
+            "pattern": "CL.Н-79",
+            "baguette": null,
+            "raw": "Soft Touch «Белый кашемир»",
+            "material": "Soft Touch",
+            "color": "Белый кашемир",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bronks/v1-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#ECECEC"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Squid",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 4
+        },
+        {
+          "id": "bronks-v2",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "CV2.П-30.1",
+            "baguette": null,
+            "raw": "SteelLak® «Синий» RAL 5011, структурный",
+            "material": "SteelLak®",
+            "color": "Синий",
+            "colorCode": "RAL 5011",
+            "texture": "структурный",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bronks/v2-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#2B333E"
+          },
+          "inside": {
+            "pattern": "CL.Н-79",
+            "baguette": null,
+            "raw": "Экошпон Premium «Ясень сливочный»",
+            "material": "Экошпон Premium",
+            "color": "Ясень сливочный",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bronks/v2-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#F3EEDB"
+          },
+          "frame": "муар «Черный» / «Слоновая кость»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Squid",
+              "finish": "сатин"
+            }
+          ],
+          "note": null,
+          "sourcePage": 4
+        },
+        {
+          "id": "bronks-v3",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "CV2.П-30.1",
+            "baguette": null,
+            "raw": "Concord Panel «Эбен», патина черная",
+            "material": "Concord Panel",
+            "color": "Эбен",
+            "colorCode": null,
+            "texture": null,
+            "patina": "черная",
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bronks/v3-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#684A2A"
+          },
+          "inside": {
+            "pattern": "CL.Н-79",
+            "baguette": null,
+            "raw": "SteelLak® «Слоновая кость» RAL 9001, гладкий",
+            "material": "SteelLak®",
+            "color": "Слоновая кость",
+            "colorCode": "RAL 9001",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bronks/v3-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#E6DDD4"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 4
+        },
+        {
+          "id": "bronks-v4",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "CV2.П-30.1",
+            "baguette": null,
+            "raw": "PVC «Бетон бежевый»",
+            "material": "PVC",
+            "color": "Бетон бежевый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bronks/v4-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#ABA29B"
+          },
+          "inside": {
+            "pattern": "CL.Н-79",
+            "baguette": null,
+            "raw": "PVC «Ясень белый»",
+            "material": "PVC",
+            "color": "Ясень белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bronks/v4-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#F2EFEA"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 4
+        }
+      ],
+      "source": {
+        "file": "1 Каталог квартира 2025.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "plimut",
+      "name": "Плимут",
+      "kind": "entrance",
+      "line": "steel",
+      "purpose": "apartment",
+      "style": "modern",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "73",
+        "82",
+        "94",
+        "100"
+      ],
+      "defaultSeries": "100",
+      "gallery": {
+        "interior": {
+          "image": "/doors/plimut/interior.jpg",
+          "imageSize": [
+            1877,
+            1031
+          ]
+        },
+        "detail": null
+      },
+      "variants": [
+        {
+          "id": "plimut-v1",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "CG.03",
+            "baguette": null,
+            "raw": "Bjork Panel «Либерика», патина черная, вставка Bjork Panel «Либерика», патина черная",
+            "material": "Bjork Panel",
+            "color": "Либерика",
+            "colorCode": null,
+            "texture": null,
+            "patina": "черная",
+            "insert": "Bjork Panel «Либерика», патина черная",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/plimut/v1-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#503730"
+          },
+          "inside": {
+            "pattern": "СМ.05",
+            "baguette": null,
+            "raw": "SteelLak® «Белый» RAL 9003, гладкий, вставка алюминиевый молдинг, черный",
+            "material": "SteelLak®",
+            "color": "Белый",
+            "colorCode": "RAL 9003",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": "алюминиевый молдинг, черный",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/plimut/v1-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#DFDFDF"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 7
+        },
+        {
+          "id": "plimut-v2",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "Color Shade «Тауп», вставка PVC «Роузвуд»",
+            "material": "Color Shade",
+            "color": "Тауп",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": "PVC «Роузвуд»",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/plimut/v2-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#A59E95"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "Камень «Травертин кремовый», вставка алюминиевый молдинг, черный",
+            "material": "Камень",
+            "color": "Травертин кремовый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": "алюминиевый молдинг, черный",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/plimut/v2-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#A29E97"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "сатинированное золото"
+            }
+          ],
+          "note": null,
+          "sourcePage": 7
+        },
+        {
+          "id": "plimut-v3",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "CG.03",
+            "baguette": null,
+            "raw": "Concord Panel «Эбен», патина черная, вставка Concord Panel «Эбен», патина черная",
+            "material": "Concord Panel",
+            "color": "Эбен",
+            "colorCode": null,
+            "texture": null,
+            "patina": "черная",
+            "insert": "Concord Panel «Эбен», патина черная",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/plimut/v3-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#74532D"
+          },
+          "inside": {
+            "pattern": "СМ.05",
+            "baguette": null,
+            "raw": "Concord Panel «Эбен», патина черная, вставка алюминиевый молдинг, черный",
+            "material": "Concord Panel",
+            "color": "Эбен",
+            "colorCode": null,
+            "texture": null,
+            "patina": "черная",
+            "insert": "алюминиевый молдинг, черный",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/plimut/v3-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#73522A"
+          },
+          "frame": "муар «Черный»",
+          "trim": "SteelLak® «Черный» RAL 9005, гладкий",
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 7
+        },
+        {
+          "id": "plimut-v4",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "CG.03",
+            "baguette": null,
+            "raw": "SteelTex® «Антрацит», вставка Камень «Травертин пепельный»",
+            "material": "SteelTex®",
+            "color": "Антрацит",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": "Камень «Травертин пепельный»",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/plimut/v4-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#444348"
+          },
+          "inside": {
+            "pattern": "CM.05",
+            "baguette": null,
+            "raw": "Камень «Травертин пепельный», вставка алюминиевый молдинг, серебро",
+            "material": "Камень",
+            "color": "Травертин пепельный",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": "алюминиевый молдинг, серебро",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/plimut/v4-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#6C6C71"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "матовый хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 7
+        }
+      ],
+      "source": {
+        "file": "1 Каталог квартира 2025.pdf",
+        "page": 7
+      }
+    },
+    {
+      "id": "marna",
+      "name": "Марна",
+      "kind": "entrance",
+      "line": "steel",
+      "purpose": "apartment",
+      "style": "modern",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "73",
+        "82",
+        "94",
+        "100"
+      ],
+      "defaultSeries": "100",
+      "gallery": {
+        "interior": {
+          "image": "/doors/marna/interior.jpg",
+          "imageSize": [
+            1877,
+            1034
+          ]
+        },
+        "detail": null
+      },
+      "variants": [
+        {
+          "id": "marna-v1",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "CM.05",
+            "baguette": null,
+            "raw": "Soft Touch «Дымчатый кашемир», вставка алюминиевый молдинг, серебро",
+            "material": "Soft Touch",
+            "color": "Дымчатый кашемир",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": "алюминиевый молдинг, серебро",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/marna/v1-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#696460"
+          },
+          "inside": {
+            "pattern": "CL.Н-83",
+            "baguette": null,
+            "raw": "Soft Touch «Снежный кашемир»",
+            "material": "Soft Touch",
+            "color": "Снежный кашемир",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/marna/v1-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#DDDDDD"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "матовый хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 15
+        },
+        {
+          "id": "marna-v2",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "CM.05",
+            "baguette": null,
+            "raw": "Soft Touch «Снежный кашемир», вставка алюминиевый молдинг, черный",
+            "material": "Soft Touch",
+            "color": "Снежный кашемир",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": "алюминиевый молдинг, черный",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/marna/v2-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#DDDDDD"
+          },
+          "inside": {
+            "pattern": "CL.Н-83",
+            "baguette": null,
+            "raw": "Soft Touch «Серый кашемир»",
+            "material": "Soft Touch",
+            "color": "Серый кашемир",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/marna/v2-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#998D84"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 15
+        },
+        {
+          "id": "marna-v3",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "CM.05",
+            "baguette": null,
+            "raw": "SteelTex® «Шагрень антрацит», вставка алюминиевый молдинг, серебро",
+            "material": "SteelTex®",
+            "color": "Шагрень антрацит",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": "алюминиевый молдинг, серебро",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/marna/v3-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#434247"
+          },
+          "inside": {
+            "pattern": "CL.Н-83",
+            "baguette": null,
+            "raw": "PVC «Серая лазурь»",
+            "material": "PVC",
+            "color": "Серая лазурь",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/marna/v3-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#888481"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Squid",
+              "finish": "хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 15
+        },
+        {
+          "id": "marna-v4",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "CM.05",
+            "baguette": null,
+            "raw": "Soft Touch «Черный кашемир», вставка алюминиевый молдинг, серебро",
+            "material": "Soft Touch",
+            "color": "Черный кашемир",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": "алюминиевый молдинг, серебро",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/marna/v4-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#313332"
+          },
+          "inside": {
+            "pattern": "CL.Н-83",
+            "baguette": null,
+            "raw": "Soft Touch «Белый кашемир»",
+            "material": "Soft Touch",
+            "color": "Белый кашемир",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/marna/v4-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#DCD9D0"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "матовый хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 15
+        }
+      ],
+      "source": {
+        "file": "1 Каталог квартира 2025.pdf",
+        "page": 15
+      }
+    },
+    {
+      "id": "bleyk",
+      "name": "Блейк",
+      "kind": "entrance",
+      "line": "steel",
+      "purpose": "apartment",
+      "style": "modern",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "73",
+        "82",
+        "94"
+      ],
+      "defaultSeries": "94",
+      "gallery": {
+        "interior": null,
+        "detail": {
+          "image": "/doors/bleyk/detail.jpg",
+          "imageSize": [
+            1876,
+            1035
+          ]
+        }
+      },
+      "variants": [
+        {
+          "id": "bleyk-v1",
+          "catalogSeries": "94",
+          "availableSeries": [
+            "82",
+            "94"
+          ],
+          "outside": {
+            "pattern": "CL1.Н-91",
+            "baguette": null,
+            "raw": "SteelLak® «Небесно-голубой» NCS S 3030-R90B, структурный",
+            "material": "SteelLak®",
+            "color": "Небесно-голубой",
+            "colorCode": "NCS S 3030-R90B",
+            "texture": "структурный",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bleyk/v1-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#768EB2"
+          },
+          "inside": {
+            "pattern": "CA2.Техно-26 + зеркало",
+            "baguette": null,
+            "raw": "Soft Touch «Снежный кашемир»",
+            "material": "Soft Touch",
+            "color": "Снежный кашемир",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bleyk/v1-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#BEBEBE"
+          },
+          "frame": "муар «Черный» / «Белый»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Armadillo Pava",
+              "finish": "золото"
+            }
+          ],
+          "note": null,
+          "sourcePage": 21
+        },
+        {
+          "id": "bleyk-v2",
+          "catalogSeries": "94",
+          "availableSeries": [
+            "73",
+            "82",
+            "94"
+          ],
+          "outside": {
+            "pattern": "CL1.Н-91",
+            "baguette": null,
+            "raw": "SteelLak® «Марсала» RAL 3032, структурный металлик",
+            "material": "SteelLak®",
+            "color": "Марсала",
+            "colorCode": "RAL 3032",
+            "texture": "структурный",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bleyk/v2-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#612A27"
+          },
+          "inside": {
+            "pattern": "CA2.Техно-26 + зеркало",
+            "baguette": null,
+            "raw": "SteelTex® «Белый»",
+            "material": "SteelTex®",
+            "color": "Белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bleyk/v2-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#BEBEBE"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 21
+        },
+        {
+          "id": "bleyk-v3",
+          "catalogSeries": "94",
+          "availableSeries": [
+            "73",
+            "82",
+            "94"
+          ],
+          "outside": {
+            "pattern": "CL1.Н-91",
+            "baguette": null,
+            "raw": "SteelTex® «Шагрень антрацит»",
+            "material": "SteelTex®",
+            "color": "Шагрень антрацит",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bleyk/v3-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#414247"
+          },
+          "inside": {
+            "pattern": "CA2.Техно-26 + зеркало",
+            "baguette": null,
+            "raw": "SteelTex® «Шагрень антрацит»",
+            "material": "SteelTex®",
+            "color": "Шагрень антрацит",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bleyk/v3-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#AFAFAF"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Squid",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 21
+        },
+        {
+          "id": "bleyk-v4",
+          "catalogSeries": "94",
+          "availableSeries": [
+            "82",
+            "94"
+          ],
+          "outside": {
+            "pattern": "CL1.Н-91",
+            "baguette": null,
+            "raw": "PVC «Шагрень зеленая»",
+            "material": "PVC",
+            "color": "Шагрень зеленая",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bleyk/v4-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#414840"
+          },
+          "inside": {
+            "pattern": "CA2.Техно-26 + зеркало",
+            "baguette": null,
+            "raw": "PVC «Ясень белый»",
+            "material": "PVC",
+            "color": "Ясень белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/bleyk/v4-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#BEBEBE"
+          },
+          "frame": "муар «Черный» / «Белый»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Squid",
+              "finish": "бронза"
+            }
+          ],
+          "note": null,
+          "sourcePage": 21
+        }
+      ],
+      "source": {
+        "file": "1 Каталог квартира 2025.pdf",
+        "page": 21
+      }
+    },
+    {
+      "id": "reyms",
+      "name": "Реймс",
+      "kind": "entrance",
+      "line": "steel",
+      "purpose": "apartment",
+      "style": "neoclassic",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "73",
+        "82",
+        "94",
+        "100"
+      ],
+      "defaultSeries": "100",
+      "gallery": {
+        "interior": {
+          "image": "/doors/reyms/interior.jpg",
+          "imageSize": [
+            1258,
+            1031
+          ]
+        },
+        "detail": {
+          "image": "/doors/reyms/detail.jpg",
+          "imageSize": [
+            1031,
+            1274
+          ]
+        }
+      },
+      "variants": [
+        {
+          "id": "reyms-v1",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "NL1.S-07",
+            "baguette": null,
+            "raw": "SteelLak® «Небесно-голубой» NCS S 3030-R90B, гладкий",
+            "material": "SteelLak®",
+            "color": "Небесно-голубой",
+            "colorCode": "NCS S 3030-R90B",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/reyms/v1-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#768EB4"
+          },
+          "inside": {
+            "pattern": "NL1.S-08",
+            "baguette": null,
+            "raw": "SteelLak® «Снежный» RAL 9010, гладкий",
+            "material": "SteelLak®",
+            "color": "Снежный",
+            "colorCode": "RAL 9010",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/reyms/v1-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#E6E2DE"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Squid",
+              "finish": "сатин"
+            }
+          ],
+          "note": null,
+          "sourcePage": 24
+        },
+        {
+          "id": "reyms-v2",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "NL1.S-07",
+            "baguette": null,
+            "raw": "SteelLak® NCS S 4010-G30 Y, гладкий",
+            "material": "SteelLak®",
+            "color": null,
+            "colorCode": "NCS S 4010-G30 Y",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/reyms/v2-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#676A59"
+          },
+          "inside": {
+            "pattern": "NL1.S-08",
+            "baguette": null,
+            "raw": "SteelLak® «Слоновая кость» RAL 9001, гладкий",
+            "material": "SteelLak®",
+            "color": "Слоновая кость",
+            "colorCode": "RAL 9001",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/reyms/v2-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#E6DDD4"
+          },
+          "frame": "муар «Черный»",
+          "trim": "Катрин, SteelLak® «Белый» RAL 9003, гладкий",
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Squid",
+              "finish": "бронза"
+            }
+          ],
+          "note": "По согласованию",
+          "sourcePage": 24
+        }
+      ],
+      "source": {
+        "file": "1 Каталог квартира 2025.pdf",
+        "page": 24
+      }
+    },
+    {
+      "id": "evri",
+      "name": "Эври",
+      "kind": "entrance",
+      "line": "steel",
+      "purpose": "apartment",
+      "style": "neoclassic",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "73",
+        "82",
+        "94",
+        "100"
+      ],
+      "defaultSeries": "100",
+      "gallery": {
+        "interior": {
+          "image": "/doors/evri/interior.jpg",
+          "imageSize": [
+            1876,
+            1031
+          ]
+        },
+        "detail": null
+      },
+      "variants": [
+        {
+          "id": "evri-v1",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "NL1.S-02",
+            "baguette": null,
+            "raw": "Камень «Травертин пепельный»",
+            "material": "Камень",
+            "color": "Травертин пепельный",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/evri/v1-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#6C6B71"
+          },
+          "inside": {
+            "pattern": "NL1.S-03",
+            "baguette": null,
+            "raw": "Soft Touch «Белый кашемир»",
+            "material": "Soft Touch",
+            "color": "Белый кашемир",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/evri/v1-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#DAD7CE"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 25
+        },
+        {
+          "id": "evri-v2",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "NL1.S-02",
+            "baguette": null,
+            "raw": "Экошпон Premium «Ясень сливочный»",
+            "material": "Экошпон Premium",
+            "color": "Ясень сливочный",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/evri/v2-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#F3ECDA"
+          },
+          "inside": {
+            "pattern": "NL1.S-03",
+            "baguette": null,
+            "raw": "Экошпон Premium «Дуб снежный»",
+            "material": "Экошпон Premium",
+            "color": "Дуб снежный",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/evri/v2-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#E2E4E5"
+          },
+          "frame": "муар «Слоновая кость» / «Снежный»",
+          "trim": "Катрин",
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Squid",
+              "finish": "сатин"
+            }
+          ],
+          "note": null,
+          "sourcePage": 25
+        },
+        {
+          "id": "evri-v3",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "NL1.S-02",
+            "baguette": null,
+            "raw": "SteelLak® «Зеленый турмалин» RAL 6028, структурный",
+            "material": "SteelLak®",
+            "color": "Зеленый турмалин",
+            "colorCode": "RAL 6028",
+            "texture": "структурный",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/evri/v3-outside.jpg",
+            "imageSize": [
+              217,
+              437
+            ],
+            "swatchHex": "#28523E"
+          },
+          "inside": {
+            "pattern": "NL1.S-03",
+            "baguette": null,
+            "raw": "SteelLak® «Слоновая кость» RAL 9001, гладкий",
+            "material": "SteelLak®",
+            "color": "Слоновая кость",
+            "colorCode": "RAL 9001",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/evri/v3-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#E6DDD4"
+          },
+          "frame": "муар «Черный» / «Слоновая кость»",
+          "trim": null,
+          "portal": "Капелла",
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Apecs 08-60",
+              "finish": "бронза"
+            }
+          ],
+          "note": null,
+          "sourcePage": 25
+        },
+        {
+          "id": "evri-v4",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "NL1.S-02",
+            "baguette": null,
+            "raw": "PVC «Шагрень зеленая»",
+            "material": "PVC",
+            "color": "Шагрень зеленая",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/evri/v4-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#414840"
+          },
+          "inside": {
+            "pattern": "NL1.S-03",
+            "baguette": null,
+            "raw": "Soft Touch «Серый кашемир»",
+            "material": "Soft Touch",
+            "color": "Серый кашемир",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/evri/v4-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#9B8E86"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "сатинированное золото"
+            }
+          ],
+          "note": null,
+          "sourcePage": 25
+        }
+      ],
+      "source": {
+        "file": "1 Каталог квартира 2025.pdf",
+        "page": 25
+      }
+    },
+    {
+      "id": "rafael",
+      "name": "Рафаэль",
+      "kind": "entrance",
+      "line": "steel",
+      "purpose": "apartment",
+      "style": "classic",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "73",
+        "82",
+        "94",
+        "100"
+      ],
+      "defaultSeries": "100",
+      "gallery": {
+        "interior": {
+          "image": "/doors/rafael/interior.jpg",
+          "imageSize": [
+            1274,
+            1031
+          ]
+        },
+        "detail": {
+          "image": "/doors/rafael/detail.jpg",
+          "imageSize": [
+            1259,
+            1031
+          ]
+        }
+      },
+      "variants": [
+        {
+          "id": "rafael-v1",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "73",
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "XL.ХФ-31",
+            "baguette": null,
+            "raw": "SteelLak® RAL 5007, структурный",
+            "material": "SteelLak®",
+            "color": null,
+            "colorCode": "RAL 5007",
+            "texture": "структурный",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/rafael/v1-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#4E6677"
+          },
+          "inside": {
+            "pattern": "KT.Н-90",
+            "baguette": null,
+            "raw": "SteelTex® «Белый»",
+            "material": "SteelTex®",
+            "color": "Белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/rafael/v1-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#DBDBDB"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Squid",
+              "finish": "сатин"
+            }
+          ],
+          "note": "По согласованию",
+          "sourcePage": 39
+        },
+        {
+          "id": "rafael-v2",
+          "catalogSeries": "100",
+          "availableSeries": [
+            "82",
+            "94",
+            "100"
+          ],
+          "outside": {
+            "pattern": "XL.ХФ-31",
+            "baguette": null,
+            "raw": "SteelLak® «Черный» RAL 9005, структурный",
+            "material": "SteelLak®",
+            "color": "Черный",
+            "colorCode": "RAL 9005",
+            "texture": "структурный",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/rafael/v2-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#202020"
+          },
+          "inside": {
+            "pattern": "KT.Н-90",
+            "baguette": null,
+            "raw": "SteelLak® «Слоновая кость» RAL 9001, гладкий",
+            "material": "SteelLak®",
+            "color": "Слоновая кость",
+            "colorCode": "RAL 9001",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/rafael/v2-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#E4DCD3"
+          },
+          "frame": "муар «Черный» / «Снежный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Apecs 08-60",
+              "finish": "бронза"
+            }
+          ],
+          "note": null,
+          "sourcePage": 39
+        }
+      ],
+      "source": {
+        "file": "1 Каталог квартира 2025.pdf",
+        "page": 39
+      }
+    },
+    {
+      "id": "avior-house",
+      "name": "Авиор",
+      "kind": "entrance",
+      "line": "steel",
+      "purpose": "house",
+      "style": "modern",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "73У",
+        "82У",
+        "92УТ",
+        "93УТ",
+        "94У",
+        "100У",
+        "100УТ"
+      ],
+      "defaultSeries": "100У",
+      "gallery": {
+        "interior": {
+          "image": "/doors/avior-house/interior.jpg",
+          "imageSize": [
+            1687,
+            1034
+          ]
+        },
+        "detail": null
+      },
+      "variants": [
+        {
+          "id": "avior-house-v1",
+          "catalogSeries": "100У",
+          "availableSeries": [
+            "73У",
+            "82У",
+            "92УТ",
+            "93УТ",
+            "94У",
+            "100У",
+            "100УТ"
+          ],
+          "outside": {
+            "pattern": "CG.04",
+            "baguette": null,
+            "raw": "SteelLak® «Слоновая кость» RAL 9001, структурный, вставка Bjork Panel «Янтарь», патина черная",
+            "material": "SteelLak®",
+            "color": "Слоновая кость",
+            "colorCode": "RAL 9001",
+            "texture": "структурный",
+            "patina": "черная",
+            "insert": "Bjork Panel «Янтарь», патина черная",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/avior-house/v1-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#DFD6CC"
+          },
+          "inside": {
+            "pattern": "CL.02",
+            "baguette": null,
+            "raw": "SteelLak® «Слоновая кость» RAL 9001, гладкий",
+            "material": "SteelLak®",
+            "color": "Слоновая кость",
+            "colorCode": "RAL 9001",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/avior-house/v1-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#E6DDD4"
+          },
+          "frame": "муар «Слоновая кость»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "railing",
+              "model": "Corso",
+              "finish": null
+            },
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 5
+        },
+        {
+          "id": "avior-house-v2",
+          "catalogSeries": "100У",
+          "availableSeries": [
+            "82У",
+            "92УТ",
+            "93УТ",
+            "94У",
+            "100У",
+            "100УТ"
+          ],
+          "outside": {
+            "pattern": "CG.04",
+            "baguette": null,
+            "raw": "Bjork Panel «Эбен», патина черная, вставка SteelLak® «Черно-серый» RAL 7021, структурный",
+            "material": "Bjork Panel",
+            "color": "Эбен",
+            "colorCode": null,
+            "texture": null,
+            "patina": "черная",
+            "insert": "SteelLak® «Черно-серый» RAL 7021, структурный",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/avior-house/v2-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#805F3D"
+          },
+          "inside": {
+            "pattern": "CL.02",
+            "baguette": null,
+            "raw": "SteelLak® «Снежный» RAL 9010, гладкий",
+            "material": "SteelLak®",
+            "color": "Снежный",
+            "colorCode": "RAL 9010",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/avior-house/v2-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#E6E1DE"
+          },
+          "frame": "муар «Черный» / «Снежный»",
+          "trim": "SteelLak® «Черно-серый» RAL 7021, структурный",
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "railing",
+              "model": "Loft 40x1200 мм",
+              "finish": null
+            },
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 5
+        }
+      ],
+      "source": {
+        "file": "2 Каталог Дом 2025.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "gelios-house",
+      "name": "Гелиос",
+      "kind": "entrance",
+      "line": "steel",
+      "purpose": "house",
+      "style": "modern",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "73У",
+        "82У",
+        "92УТ",
+        "93УТ",
+        "94У",
+        "100У",
+        "100УТ"
+      ],
+      "defaultSeries": "100У",
+      "gallery": {
+        "interior": {
+          "image": "/doors/gelios-house/interior.jpg",
+          "imageSize": [
+            1686,
+            1035
+          ]
+        },
+        "detail": null
+      },
+      "variants": [
+        {
+          "id": "gelios-house-v1",
+          "catalogSeries": "100У",
+          "availableSeries": [
+            "73У",
+            "82У",
+            "92УТ",
+            "93УТ",
+            "94У",
+            "100У",
+            "100УТ"
+          ],
+          "outside": {
+            "pattern": "CV2.01",
+            "baguette": null,
+            "raw": "SteelLak® «Нефрит» RAL 6036, структурный металлик, молдинги, черный",
+            "material": "SteelLak®",
+            "color": "Нефрит",
+            "colorCode": "RAL 6036",
+            "texture": "структурный",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/gelios-house/v1-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#025952"
+          },
+          "inside": {
+            "pattern": "СL1.04",
+            "baguette": null,
+            "raw": "SteelLak® «Белый» RAL 9003, структурный",
+            "material": "SteelLak®",
+            "color": "Белый",
+            "colorCode": "RAL 9003",
+            "texture": "структурный",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/gelios-house/v1-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#DADADA"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": "Aqara N100",
+          "handles": [],
+          "note": null,
+          "sourcePage": 9
+        },
+        {
+          "id": "gelios-house-v2",
+          "catalogSeries": "100У",
+          "availableSeries": [
+            "73У",
+            "82У",
+            "92УТ",
+            "93УТ",
+            "94У",
+            "100У",
+            "100УТ"
+          ],
+          "outside": {
+            "pattern": "CV2.01",
+            "baguette": null,
+            "raw": "SteelLak® RAL 5025*, гладкий металлик, молдинги, серебро",
+            "material": "SteelLak®",
+            "color": null,
+            "colorCode": "RAL 5025",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/gelios-house/v2-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#38595D"
+          },
+          "inside": {
+            "pattern": "СL1.04",
+            "baguette": null,
+            "raw": "SteelLak® «Серый» RAL 7044, гладкий",
+            "material": "SteelLak®",
+            "color": "Серый",
+            "colorCode": "RAL 7044",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/gelios-house/v2-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#CDC9C6"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Squid",
+              "finish": "сатин"
+            }
+          ],
+          "note": "По согласованию",
+          "sourcePage": 9
+        }
+      ],
+      "source": {
+        "file": "2 Каталог Дом 2025.pdf",
+        "page": 9
+      }
+    },
+    {
+      "id": "reyms-house",
+      "name": "Реймс",
+      "kind": "entrance",
+      "line": "steel",
+      "purpose": "house",
+      "style": "neoclassic",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "73У",
+        "82У",
+        "92УТ",
+        "93УТ",
+        "94У",
+        "100У",
+        "100УТ"
+      ],
+      "defaultSeries": "100У",
+      "gallery": {
+        "interior": {
+          "image": "/doors/reyms-house/interior.jpg",
+          "imageSize": [
+            1689,
+            1035
+          ]
+        },
+        "detail": null
+      },
+      "variants": [
+        {
+          "id": "reyms-house-v1",
+          "catalogSeries": "100У",
+          "availableSeries": [
+            "73У",
+            "82У",
+            "92УТ",
+            "93УТ",
+            "94У",
+            "100У",
+            "100УТ"
+          ],
+          "outside": {
+            "pattern": "NL1.S-07",
+            "baguette": null,
+            "raw": "SteelLak® NCS S 4005-G20 Y, гладкий",
+            "material": "SteelLak®",
+            "color": null,
+            "colorCode": "NCS S 4005-G20 Y",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/reyms-house/v1-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#919890"
+          },
+          "inside": {
+            "pattern": "NL1.S-08",
+            "baguette": null,
+            "raw": "SteelLak® «Платиновый серый» RAL 7036, гладкий",
+            "material": "SteelLak®",
+            "color": "Платиновый серый",
+            "colorCode": "RAL 7036",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/reyms-house/v1-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#A9A4A0"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Squid",
+              "finish": "сатин"
+            }
+          ],
+          "note": "По согласованию",
+          "sourcePage": 24
+        },
+        {
+          "id": "reyms-house-v2",
+          "catalogSeries": "100У",
+          "availableSeries": [
+            "73У",
+            "82У",
+            "92УТ",
+            "93УТ",
+            "94У",
+            "100У",
+            "100УТ"
+          ],
+          "outside": {
+            "pattern": "NL1.S-09",
+            "baguette": null,
+            "raw": "Bjork Panel «Терра», патина черная",
+            "material": "Bjork Panel",
+            "color": "Терра",
+            "colorCode": null,
+            "texture": null,
+            "patina": "черная",
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/reyms-house/v2-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#454445"
+          },
+          "inside": {
+            "pattern": "NL1.S-10",
+            "baguette": null,
+            "raw": "Экошпон Premium «Дуб снежный»",
+            "material": "Экошпон Premium",
+            "color": "Дуб снежный",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/reyms-house/v2-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#E2E4E5"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Armadillo Pava",
+              "finish": "хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 24
+        }
+      ],
+      "source": {
+        "file": "2 Каталог Дом 2025.pdf",
+        "page": 24
+      }
+    },
+    {
+      "id": "versache-house",
+      "name": "Версаче",
+      "kind": "entrance",
+      "line": "steel",
+      "purpose": "house",
+      "style": "classic",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "73У",
+        "82У",
+        "92УТ",
+        "93УТ",
+        "94У",
+        "100У",
+        "100УТ"
+      ],
+      "defaultSeries": "100У",
+      "gallery": {
+        "interior": {
+          "image": "/doors/versache-house/interior.jpg",
+          "imageSize": [
+            1681,
+            1036
+          ]
+        },
+        "detail": null
+      },
+      "variants": [
+        {
+          "id": "versache-house-v1",
+          "catalogSeries": "100У",
+          "availableSeries": [
+            "73У",
+            "82У",
+            "92УТ",
+            "93УТ",
+            "94У",
+            "100У",
+            "100УТ"
+          ],
+          "outside": {
+            "pattern": "XL.ХФ-38",
+            "baguette": null,
+            "raw": "SteelLak® «Белый» RAL 9003, гладкий",
+            "material": "SteelLak®",
+            "color": "Белый",
+            "colorCode": "RAL 9003",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/versache-house/v1-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#DEDEDE"
+          },
+          "inside": {
+            "pattern": "XV.П-10 Версаче",
+            "baguette": null,
+            "raw": "SteelTex® «Белый», патина серебро",
+            "material": "SteelTex®",
+            "color": "Белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": "серебро",
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/versache-house/v1-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#DCDCDC"
+          },
+          "frame": "муар «Белый»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Apecs 08-60",
+              "finish": "хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 31
+        },
+        {
+          "id": "versache-house-v2",
+          "catalogSeries": "100У",
+          "availableSeries": [
+            "82У",
+            "92УТ",
+            "93УТ",
+            "94У",
+            "100У",
+            "100УТ"
+          ],
+          "outside": {
+            "pattern": "XL.ХФ-38",
+            "baguette": null,
+            "raw": "SteelLak® RAL 2013, гладкий",
+            "material": "SteelLak®",
+            "color": null,
+            "colorCode": "RAL 2013",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/versache-house/v2-outside.png",
+            "imageSize": [
+              227,
+              448
+            ],
+            "swatchHex": "#8C491D"
+          },
+          "inside": {
+            "pattern": "XV.П-10 Версаче",
+            "baguette": null,
+            "raw": "SteelLak® «Белый» RAL 9003, гладкий, патина кофе",
+            "material": "SteelLak®",
+            "color": "Белый",
+            "colorCode": "RAL 9003",
+            "texture": "гладкий",
+            "patina": "кофе",
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/versache-house/v2-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#DCDCDC"
+          },
+          "frame": "муар «Черный» / «Белый»",
+          "trim": null,
+          "portal": "«Адажио»",
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Palazzio",
+              "finish": null
+            },
+            {
+              "type": "handle",
+              "model": "Armadillo Pava",
+              "finish": "бронза"
+            }
+          ],
+          "note": "По согласованию",
+          "sourcePage": 31
+        }
+      ],
+      "source": {
+        "file": "2 Каталог Дом 2025.pdf",
+        "page": 31
+      }
+    },
+    {
+      "id": "ontario-house",
+      "name": "Онтарио",
+      "kind": "entrance",
+      "line": "steel",
+      "purpose": "house",
+      "style": "with-window",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "82У",
+        "92УТ",
+        "93УТ",
+        "94У",
+        "100У",
+        "100УТ"
+      ],
+      "defaultSeries": "100У",
+      "gallery": {
+        "interior": {
+          "image": "/doors/ontario-house/interior.jpg",
+          "imageSize": [
+            1876,
+            1036
+          ]
+        },
+        "detail": null
+      },
+      "variants": [
+        {
+          "id": "ontario-house-v1",
+          "catalogSeries": "100У",
+          "availableSeries": [
+            "82У",
+            "92УТ",
+            "93УТ",
+            "94У",
+            "100У",
+            "100УТ"
+          ],
+          "outside": {
+            "pattern": "О-L-Z.5",
+            "baguette": null,
+            "raw": "SteelLak® «Белый» RAL 9003, структурный, вставка Bjork Panel «Маджента», патина черная",
+            "material": "SteelLak®",
+            "color": "Белый",
+            "colorCode": "RAL 9003",
+            "texture": "структурный",
+            "patina": "черная",
+            "insert": "Bjork Panel «Маджента», патина черная",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/ontario-house/v1-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#F4F4F4"
+          },
+          "inside": {
+            "pattern": "О-L-Z.1",
+            "baguette": null,
+            "raw": "SteelTex® «Белый», рамка L1, хром",
+            "material": "SteelTex®",
+            "color": "Белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/ontario-house/v1-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#D8D8D8"
+          },
+          "frame": "муар «Белый»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": "L",
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Apecs 08-60",
+              "finish": "хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 40
+        },
+        {
+          "id": "ontario-house-v2",
+          "catalogSeries": "100У",
+          "availableSeries": [
+            "82У",
+            "92УТ",
+            "93УТ",
+            "94У",
+            "100У",
+            "100УТ"
+          ],
+          "outside": {
+            "pattern": "О-L-Z.5",
+            "baguette": null,
+            "raw": "SteelLak® «Антрацит» RAL 7016, структурный, вставка Bjork Panel «Шабо», патина черная",
+            "material": "SteelLak®",
+            "color": "Антрацит",
+            "colorCode": "RAL 7016",
+            "texture": "структурный",
+            "patina": "черная",
+            "insert": "Bjork Panel «Шабо», патина черная",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/ontario-house/v2-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#383E42"
+          },
+          "inside": {
+            "pattern": "О-L-Z.1",
+            "baguette": null,
+            "raw": "PVC «Бетон бежевый», рамка L1, черный",
+            "material": "PVC",
+            "color": "Бетон бежевый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/ontario-house/v2-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#A69D96"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": "L",
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "railing",
+              "model": "Loft 40x1200 мм",
+              "finish": "черный"
+            },
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 40
+        },
+        {
+          "id": "ontario-house-v3",
+          "catalogSeries": "100У",
+          "availableSeries": [
+            "82У",
+            "92УТ",
+            "93УТ",
+            "94У",
+            "100У",
+            "100УТ"
+          ],
+          "outside": {
+            "pattern": "О-L-Z.5",
+            "baguette": null,
+            "raw": "Bjork Panel «Калабрия», вставка Bjork Panel «Калабрия», патина черная",
+            "material": "Bjork Panel",
+            "color": "Калабрия",
+            "colorCode": null,
+            "texture": null,
+            "patina": "черная",
+            "insert": "Bjork Panel «Калабрия», патина черная",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/ontario-house/v3-outside.jpg",
+            "imageSize": [
+              205,
+              438
+            ],
+            "swatchHex": "#755544"
+          },
+          "inside": {
+            "pattern": "О-L-Z.1",
+            "baguette": null,
+            "raw": "SteelLak® «Слоновая кость» RAL 9001, гладкий, рамка L1, черный",
+            "material": "SteelLak®",
+            "color": "Слоновая кость",
+            "colorCode": "RAL 9001",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/ontario-house/v3-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#E0D7CC"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": "L",
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 40
+        },
+        {
+          "id": "ontario-house-v4",
+          "catalogSeries": "100У",
+          "availableSeries": [
+            "82У",
+            "92УТ",
+            "93УТ",
+            "94У",
+            "100У",
+            "100УТ"
+          ],
+          "outside": {
+            "pattern": "О-L-Z.5",
+            "baguette": null,
+            "raw": "SteelLak® «Черный» RAL 9005, структурный, вставка Bjork Panel «Терра», патина черная",
+            "material": "SteelLak®",
+            "color": "Черный",
+            "colorCode": "RAL 9005",
+            "texture": "структурный",
+            "patina": "черная",
+            "insert": "Bjork Panel «Терра», патина черная",
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/ontario-house/v4-outside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#464346"
+          },
+          "inside": {
+            "pattern": "О-L-Z.1",
+            "baguette": null,
+            "raw": "SteelLak® «Серый» RAL 7044, гладкий, рамка L1, хром",
+            "material": "SteelLak®",
+            "color": "Серый",
+            "colorCode": "RAL 7044",
+            "texture": "гладкий",
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/ontario-house/v4-inside.jpg",
+            "imageSize": [
+              205,
+              437
+            ],
+            "swatchHex": "#BBB9B4"
+          },
+          "frame": "муар «Черный»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": "L",
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Flow",
+              "finish": "хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 40
+        }
+      ],
+      "source": {
+        "file": "2 Каталог Дом 2025.pdf",
+        "page": 40
+      }
+    },
+    {
+      "id": "arktik-husky",
+      "name": "Арктик",
+      "kind": "entrance",
+      "line": "husky",
+      "purpose": "house",
+      "style": "modern",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "Хаски Light",
+        "Хаски A",
+        "Хаски B",
+        "Хаски PRO"
+      ],
+      "defaultSeries": null,
+      "gallery": {
+        "interior": {
+          "image": "/doors/arktik-husky/interior.jpg",
+          "imageSize": [
+            2400,
+            1966
+          ]
+        },
+        "detail": {
+          "image": "/doors/arktik-husky/detail.jpg",
+          "imageSize": [
+            2400,
+            1942
+          ]
+        }
+      },
+      "variants": [
+        {
+          "id": "arktik-husky-v1",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Гранат»",
+            "material": "муар",
+            "color": "Гранат",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/arktik-husky/v1-outside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#512E2A"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Слоновая кость»",
+            "material": "муар",
+            "color": "Слоновая кость",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/arktik-husky/v1-inside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#E3DCD2"
+          },
+          "frame": "муар «Гранат» / муар «Слоновая кость»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "railing",
+              "model": "Loft 40х1200 мм",
+              "finish": "шлифованная н/ж"
+            },
+            {
+              "type": "handle",
+              "model": "Fuaro Flow",
+              "finish": "хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 10
+        },
+        {
+          "id": "arktik-husky-v2",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски Light",
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Антрацит»",
+            "material": "муар",
+            "color": "Антрацит",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/arktik-husky/v2-outside.jpg",
+            "imageSize": [
+              425,
+              909
+            ],
+            "swatchHex": "#3D3E40"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Белый»",
+            "material": "муар",
+            "color": "Белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/arktik-husky/v2-inside.jpg",
+            "imageSize": [
+              425,
+              909
+            ],
+            "swatchHex": "#DCDCDC"
+          },
+          "frame": "муар «Антрацит» / муар «Белый»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Fuaro Flow",
+              "finish": "матовый хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 10
+        }
+      ],
+      "source": {
+        "file": "3 Каталог Хаски 2025.pdf",
+        "page": 10
+      }
+    },
+    {
+      "id": "skagen-husky",
+      "name": "Скаген",
+      "kind": "entrance",
+      "line": "husky",
+      "purpose": "house",
+      "style": "modern",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "Хаски A",
+        "Хаски B",
+        "Хаски PRO"
+      ],
+      "defaultSeries": null,
+      "gallery": {
+        "interior": {
+          "image": "/doors/skagen-husky/interior.jpg",
+          "imageSize": [
+            2400,
+            1283
+          ]
+        },
+        "detail": null
+      },
+      "variants": [
+        {
+          "id": "skagen-husky-v1",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Малахит», молдинги M-4, черный",
+            "material": "муар",
+            "color": "Малахит",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": "M-4, черный",
+            "image": "/doors/skagen-husky/v1-outside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#304936"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Слоновая кость»",
+            "material": "муар",
+            "color": "Слоновая кость",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/skagen-husky/v1-inside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#E3DCD2"
+          },
+          "frame": "муар «Малахит» / муар «Слоновая кость»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": "Morgan Secret SN-K8LW",
+          "handles": [],
+          "note": null,
+          "sourcePage": 11
+        },
+        {
+          "id": "skagen-husky-v2",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Антрацит», молдинги M-4, черный",
+            "material": "муар",
+            "color": "Антрацит",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": "M-4, черный",
+            "image": "/doors/skagen-husky/v2-outside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#434343"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Слоновая кость»",
+            "material": "муар",
+            "color": "Слоновая кость",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/skagen-husky/v2-inside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#E3DCD2"
+          },
+          "frame": "муар «Антрацит» / муар «Слоновая кость»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Fuaro Flow",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 11
+        },
+        {
+          "id": "skagen-husky-v3",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "ламинированное покрытие «Дуб золотой», молдинги M-4, черный",
+            "material": "ламинированное покрытие",
+            "color": "Дуб золотой",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": "M-4, черный",
+            "image": "/doors/skagen-husky/v3-outside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#643E17"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "ламинированное покрытие «Дуб золотой»",
+            "material": "ламинированное покрытие",
+            "color": "Дуб золотой",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/skagen-husky/v3-inside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#643E17"
+          },
+          "frame": "ламинированное покрытие «Дуб золотой»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "railing",
+              "model": "Loft 60х1500 мм",
+              "finish": "ламинированное покрытие «Дуб золотой», с системой Electro-Latch Basic (управление кнопкой)"
+            },
+            {
+              "type": "handle",
+              "model": "Fuaro Flow",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 11
+        },
+        {
+          "id": "skagen-husky-v4",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Коричневый», молдинги M-4, хром",
+            "material": "муар",
+            "color": "Коричневый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": "M-4, хром",
+            "image": "/doors/skagen-husky/v4-outside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#3C3431"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Слоновая кость»",
+            "material": "муар",
+            "color": "Слоновая кость",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/skagen-husky/v4-inside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#E3DCD2"
+          },
+          "frame": "муар «Коричневый» / муар «Слоновая кость»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Fuaro Flow",
+              "finish": "матовый хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 11
+        }
+      ],
+      "source": {
+        "file": "3 Каталог Хаски 2025.pdf",
+        "page": 11
+      }
+    },
+    {
+      "id": "avenida-husky",
+      "name": "Авенида",
+      "kind": "entrance",
+      "line": "husky",
+      "purpose": "house",
+      "style": "modern",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "Хаски A",
+        "Хаски B",
+        "Хаски PRO"
+      ],
+      "defaultSeries": null,
+      "gallery": {
+        "interior": {
+          "image": "/doors/avenida-husky/interior.jpg",
+          "imageSize": [
+            2400,
+            1283
+          ]
+        },
+        "detail": null
+      },
+      "variants": [
+        {
+          "id": "avenida-husky-v1",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Белый», полоса — муар «Черный»",
+            "material": "муар",
+            "color": "Белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": "муар «Черный»",
+            "molding": null,
+            "image": "/doors/avenida-husky/v1-outside.jpg",
+            "imageSize": [
+              425,
+              909
+            ],
+            "swatchHex": "#D2D2D2"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Белый»",
+            "material": "муар",
+            "color": "Белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/avenida-husky/v1-inside.jpg",
+            "imageSize": [
+              425,
+              909
+            ],
+            "swatchHex": "#DBDBDB"
+          },
+          "frame": "муар «Белый»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "railing",
+              "model": "Loft 40х1200 мм",
+              "finish": "черный"
+            },
+            {
+              "type": "handle",
+              "model": "Fuaro Flow",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 24
+        },
+        {
+          "id": "avenida-husky-v2",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Белый», полоса — ламинированное покрытие «Дуб золотой»",
+            "material": "муар",
+            "color": "Белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": "ламинированное покрытие «Дуб золотой»",
+            "molding": null,
+            "image": "/doors/avenida-husky/v2-outside.jpg",
+            "imageSize": [
+              425,
+              909
+            ],
+            "swatchHex": "#DDDDDD"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Белый»",
+            "material": "муар",
+            "color": "Белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/avenida-husky/v2-inside.jpg",
+            "imageSize": [
+              425,
+              909
+            ],
+            "swatchHex": "#E5E5E5"
+          },
+          "frame": "муар «Белый»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "railing",
+              "model": "Loft 40х1200 мм",
+              "finish": "хром"
+            },
+            {
+              "type": "handle",
+              "model": "Fuaro Flow",
+              "finish": "хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 24
+        },
+        {
+          "id": "avenida-husky-v3",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Гранат», полоса — муар «Слоновая кость»",
+            "material": "муар",
+            "color": "Гранат",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": "муар «Слоновая кость»",
+            "molding": null,
+            "image": "/doors/avenida-husky/v3-outside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#56332E"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Слоновая кость»",
+            "material": "муар",
+            "color": "Слоновая кость",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/avenida-husky/v3-inside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#E3DCD2"
+          },
+          "frame": "муар «Гранат» / муар «Слоновая кость»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Apecs Inox",
+              "finish": "шлифованная н/ж"
+            }
+          ],
+          "note": null,
+          "sourcePage": 24
+        },
+        {
+          "id": "avenida-husky-v4",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Коричневый», полоса — ламинированное покрытие «Дуб золотой»",
+            "material": "муар",
+            "color": "Коричневый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": "ламинированное покрытие «Дуб золотой»",
+            "molding": null,
+            "image": "/doors/avenida-husky/v4-outside.jpg",
+            "imageSize": [
+              425,
+              909
+            ],
+            "swatchHex": "#4C3C32"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": null,
+            "raw": "муар «Слоновая кость»",
+            "material": "муар",
+            "color": "Слоновая кость",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/avenida-husky/v4-inside.jpg",
+            "imageSize": [
+              425,
+              909
+            ],
+            "swatchHex": "#E4DDD7"
+          },
+          "frame": "муар «Коричневый» / муар «Слоновая кость»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": null,
+          "smartLock": "Aqara N100",
+          "handles": [],
+          "note": null,
+          "sourcePage": 24
+        }
+      ],
+      "source": {
+        "file": "3 Каталог Хаски 2025.pdf",
+        "page": 24
+      }
+    },
+    {
+      "id": "alert-husky",
+      "name": "Алерт",
+      "kind": "entrance",
+      "line": "husky",
+      "purpose": "house",
+      "style": "classic",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "Хаски A",
+        "Хаски B",
+        "Хаски PRO"
+      ],
+      "defaultSeries": null,
+      "gallery": {
+        "interior": null,
+        "detail": {
+          "image": "/doors/alert-husky/detail.jpg",
+          "imageSize": [
+            2400,
+            1283
+          ]
+        }
+      },
+      "variants": [
+        {
+          "id": "alert-husky-v1",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": "AL-L2",
+            "raw": "муар «Антрацит»",
+            "material": "муар",
+            "color": "Антрацит",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/alert-husky/v1-outside.jpg",
+            "imageSize": [
+              478,
+              917
+            ],
+            "swatchHex": "#454545"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": "AL-L2",
+            "raw": "муар «Белый»",
+            "material": "муар",
+            "color": "Белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/alert-husky/v1-inside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#DCDCDC"
+          },
+          "frame": "муар «Антрацит» / муар «Белый»",
+          "trim": "ZN-Поло, муар «Антрацит»",
+          "portal": "ZN-1, муар «Антрацит»",
+          "decor": "почтовый ящик, хром",
+          "window": "B, витраж В3, контур серебро",
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Fuaro Flow",
+              "finish": "хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 28
+        },
+        {
+          "id": "alert-husky-v2",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": "AL-L2",
+            "raw": "муар «Гранат»",
+            "material": "муар",
+            "color": "Гранат",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/alert-husky/v2-outside.jpg",
+            "imageSize": [
+              478,
+              917
+            ],
+            "swatchHex": "#512E2A"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": "AL-L2",
+            "raw": "муар «Слоновая кость»",
+            "material": "муар",
+            "color": "Слоновая кость",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/alert-husky/v2-inside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#DDD5CC"
+          },
+          "frame": "муар «Гранат» / муар «Слоновая кость»",
+          "trim": "ZN-Поло, муар «Гранат»",
+          "portal": "ZN-1, муар «Гранат»",
+          "decor": null,
+          "window": "B, витраж В2, контур серебро",
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Apecs Inox",
+              "finish": "шлифованная н/ж"
+            }
+          ],
+          "note": null,
+          "sourcePage": 28
+        },
+        {
+          "id": "alert-husky-v3",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": "AL-L2",
+            "raw": "муар «Сапфир»",
+            "material": "муар",
+            "color": "Сапфир",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/alert-husky/v3-outside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#2C353A"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": "AL-L2",
+            "raw": "муар «Белый»",
+            "material": "муар",
+            "color": "Белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/alert-husky/v3-inside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#DEDEDE"
+          },
+          "frame": "муар «Сапфир» / муар «Белый»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": "B, витраж B3, контур черный",
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Fuaro Flow",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 28
+        },
+        {
+          "id": "alert-husky-v4",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": "AL-L2",
+            "raw": "муар «Коричневый»",
+            "material": "муар",
+            "color": "Коричневый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/alert-husky/v4-outside.jpg",
+            "imageSize": [
+              425,
+              909
+            ],
+            "swatchHex": "#5B4F4A"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": "AL-L2",
+            "raw": "муар «Слоновая кость»",
+            "material": "муар",
+            "color": "Слоновая кость",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/alert-husky/v4-inside.jpg",
+            "imageSize": [
+              425,
+              909
+            ],
+            "swatchHex": "#CDC6BD"
+          },
+          "frame": "муар «Коричневый» / муар «Слоновая кость»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": "B",
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Apecs Inox",
+              "finish": "шлифованная н/ж"
+            }
+          ],
+          "note": null,
+          "sourcePage": 28
+        }
+      ],
+      "source": {
+        "file": "3 Каталог Хаски 2025.pdf",
+        "page": 28
+      }
+    },
+    {
+      "id": "kornuell-husky",
+      "name": "Корнуэлл",
+      "kind": "entrance",
+      "line": "husky",
+      "purpose": "house",
+      "style": "classic",
+      "description": null,
+      "priceFrom": null,
+      "inStock": null,
+      "availableSeries": [
+        "Хаски A",
+        "Хаски B",
+        "Хаски PRO"
+      ],
+      "defaultSeries": null,
+      "gallery": {
+        "interior": {
+          "image": "/doors/kornuell-husky/interior.jpg",
+          "imageSize": [
+            2400,
+            1284
+          ]
+        },
+        "detail": null
+      },
+      "variants": [
+        {
+          "id": "kornuell-husky-v1",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": "AL-P10",
+            "raw": "муар «Гранат»",
+            "material": "муар",
+            "color": "Гранат",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/kornuell-husky/v1-outside.jpg",
+            "imageSize": [
+              478,
+              914
+            ],
+            "swatchHex": "#502D29"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": "AL-P10",
+            "raw": "муар «Белый»",
+            "material": "муар",
+            "color": "Белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/kornuell-husky/v1-inside.jpg",
+            "imageSize": [
+              434,
+              915
+            ],
+            "swatchHex": "#DFDFDF"
+          },
+          "frame": "муар «Гранат» / муар «Белый»",
+          "trim": "ZN-Поло, муар «Белый»",
+          "portal": "ZN-1, муар «Белый»",
+          "decor": null,
+          "window": "К",
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Fuaro Flow",
+              "finish": "хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 34
+        },
+        {
+          "id": "kornuell-husky-v2",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": "AL-P10",
+            "raw": "муар «Белый»",
+            "material": "муар",
+            "color": "Белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/kornuell-husky/v2-outside.jpg",
+            "imageSize": [
+              425,
+              910
+            ],
+            "swatchHex": "#E7E7E8"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": "AL-P10",
+            "raw": "муар «Белый»",
+            "material": "муар",
+            "color": "Белый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/kornuell-husky/v2-inside.jpg",
+            "imageSize": [
+              425,
+              909
+            ],
+            "swatchHex": "#EDEDED"
+          },
+          "frame": "муар «Белый»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": "К",
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Apecs Inox",
+              "finish": "шлифованная н/ж"
+            }
+          ],
+          "note": null,
+          "sourcePage": 34
+        },
+        {
+          "id": "kornuell-husky-v3",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": "AL-P10",
+            "raw": "муар «Малахит»",
+            "material": "муар",
+            "color": "Малахит",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/kornuell-husky/v3-outside.jpg",
+            "imageSize": [
+              425,
+              909
+            ],
+            "swatchHex": "#183327"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": "AL-P10",
+            "raw": "муар «Слоновая кость»",
+            "material": "муар",
+            "color": "Слоновая кость",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/kornuell-husky/v3-inside.jpg",
+            "imageSize": [
+              425,
+              909
+            ],
+            "swatchHex": "#E3DCD6"
+          },
+          "frame": "муар «Малахит» / муар «Слоновая кость»",
+          "trim": null,
+          "portal": null,
+          "decor": null,
+          "window": "К",
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Fuaro Flow",
+              "finish": "черный"
+            }
+          ],
+          "note": null,
+          "sourcePage": 34
+        },
+        {
+          "id": "kornuell-husky-v4",
+          "catalogSeries": null,
+          "availableSeries": [
+            "Хаски A",
+            "Хаски B",
+            "Хаски PRO"
+          ],
+          "outside": {
+            "pattern": null,
+            "baguette": "AL-P10",
+            "raw": "муар «Коричневый»",
+            "material": "муар",
+            "color": "Коричневый",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/kornuell-husky/v4-outside.png",
+            "imageSize": [
+              468,
+              912
+            ],
+            "swatchHex": "#2B1F1A"
+          },
+          "inside": {
+            "pattern": null,
+            "baguette": "AL-P10",
+            "raw": "муар «Слоновая кость»",
+            "material": "муар",
+            "color": "Слоновая кость",
+            "colorCode": null,
+            "texture": null,
+            "patina": null,
+            "insert": null,
+            "stripe": null,
+            "molding": null,
+            "image": "/doors/kornuell-husky/v4-inside.jpg",
+            "imageSize": [
+              425,
+              909
+            ],
+            "swatchHex": "#E3DCD6"
+          },
+          "frame": "муар «Коричневый» / муар «Слоновая кость»",
+          "trim": "ZN-Поло, муар «Коричневый»",
+          "portal": "ZN-1, муар «Коричневый»",
+          "decor": null,
+          "window": "К",
+          "smartLock": null,
+          "handles": [
+            {
+              "type": "handle",
+              "model": "Fuaro Flow",
+              "finish": "хром"
+            }
+          ],
+          "note": null,
+          "sourcePage": 34
+        }
+      ],
+      "source": {
+        "file": "3 Каталог Хаски 2025.pdf",
+        "page": 34
+      }
+    }
+  ]
+}
