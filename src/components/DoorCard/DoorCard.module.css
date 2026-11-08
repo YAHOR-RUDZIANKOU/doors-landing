@@ -1,0 +1,117 @@
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card__img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 172px;
+  padding: 12px 0;
+  background-color: #eef0f2;
+  border-radius: 14px;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.card__wrapper:hover .card__image {
+  transform: translateY(-5px);
+}
+
+.card__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  padding: 6px 12px;
+  color: #fff;
+  background-color: #a9430c;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.card__colors {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 30px;
+}
+
+.card__color {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border: 2px solid #c7c7c7;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Цвета кружков */
+.card__color[data-color="#303236"] {
+  background-color: #303236;
+}
+
+.card__color[data-color="#49382F"] {
+  background-color: #49382f;
+}
+
+.card__color[data-color="#E5E2DC"] {
+  background-color: #e5e2dc;
+}
+
+.card__color[data-color="#795C49"] {
+  background-color: #795c49;
+}
+
+/* Активный кружок */
+.card__color--active {
+  outline: 2px solid #17191b;
+  outline-offset: 3px;
+}
+
+.card__price {
+  color: #17191b;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card__name {
+  color: #687989;
+  font-size: 20px;
+}
+
+.card__name span {
+  color: #17191b;
+  font-weight: 500;
+}
+
+.card__description {
+  color: #687989;
+  font-size: 17px;
+}
+
+.hidden{
+    display: none;
+}
