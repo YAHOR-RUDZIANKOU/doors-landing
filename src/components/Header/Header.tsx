@@ -19,7 +19,7 @@ const Header = () => {
               </span>
             </div>
 
-            <ContactButton />
+            <ContactButton title="Связаться со специалистом" variant='primary' />
           </div>
         </div>
       </Container>

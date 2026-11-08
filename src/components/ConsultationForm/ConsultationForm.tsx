@@ -13,11 +13,14 @@ const callTimeOptions = [
 interface ConsultationFormProps {
   onClose?: () => void;
   flag?: boolean;
+  variant?: "primary" | "secondary" | "text";
+  requestText?: string|null;
 }
 
 export default function ConsultationForm({
   onClose,
   flag,
+  requestText,
 }: ConsultationFormProps) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -80,6 +83,13 @@ export default function ConsultationForm({
       </div>
 
       <form className={styles.form__content} onSubmit={handleSubmit}>
+        {requestText && (
+          <div className={styles.form__request}>
+            <span className={styles.form__requestLabel}>Вы выбрали</span>
+
+            <p className={styles.form__requestText}>{requestText}</p>
+          </div>
+        )}
         <div className={styles.name__wrapper}>
           <label htmlFor="consultation-name" className={styles.name__text}>
             Имя <span>*</span>
