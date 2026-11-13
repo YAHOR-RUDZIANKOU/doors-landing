@@ -1,21 +1,19 @@
 .header {
   width: 100%;
-  background-color: #17191b;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  transition:
-    background-color 0.3s ease,
-    backdrop-filter 0.3s ease;
+
+  background-color: rgba(23, 25, 27, 1);
+  -webkit-backdrop-filter: blur(16px) brightness(0.35);
+  backdrop-filter: blur(16px) brightness(0.35);
+  transition: background-color 0.3s ease;
 }
 
 .header__scrolled {
   background-color: rgba(23, 25, 27, 0.6);
-  -webkit-backdrop-filter: blur(16px) brightness(0.35);
-  backdrop-filter: blur(16px) brightness(0.35);
 }
-
 .content__wrapper {
   min-height: 80px;
   display: flex;

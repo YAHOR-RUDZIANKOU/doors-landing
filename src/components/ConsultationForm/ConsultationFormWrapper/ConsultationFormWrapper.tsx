@@ -1,4 +1,5 @@
 "use client";
+import { createPortal } from "react-dom";
 import classes from "./ConsultationFormWrapper.module.css";
 import ConsultationForm from "../ConsultationForm";
 
@@ -11,14 +12,15 @@ const ConsultationFormWrapper = ({
   setIsOpen,
   requestText,
 }: ConsultationFormWrapperProps) => {
-  return (
+  return createPortal(
     <div onClick={() => setIsOpen(false)} className={classes.form__wrapper}>
       <ConsultationForm
         onClose={() => setIsOpen(false)}
         flag={true}
         requestText={requestText}
       />
-    </div>
+    </div>,
+    document.body,
   );
 };
 
