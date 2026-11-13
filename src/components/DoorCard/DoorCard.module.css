@@ -1,8 +1,8 @@
-
 .card__wrapper {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  min-width: 0;
 }
 
 .card__img {
@@ -11,10 +11,12 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 172px;
+  aspect-ratio: 0.9;
   padding: 12px 0;
+  box-sizing: border-box;
   background-color: #eef0f2;
   border-radius: 14px;
+  overflow: hidden;
 }
 
 .card__image {
@@ -30,39 +32,39 @@
 
 .card__badge {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 6px;
+  left: 10px;
   z-index: 2;
-  padding: 6px 12px;
+  padding: 4px 8px;
   color: #fff;
   background-color: #a9430c;
-  border-radius: 6px;
+  border-radius: 5px;
+  font-size: 14px;
   font-weight: 600;
 }
 
 .card__colors {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 8px;
+  left: 8px;
   z-index: 2;
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 10px;
+  padding: 4px 8px;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 30px;
 }
 
 .card__color {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
   border: 2px solid #c7c7c7;
   border-radius: 50%;
   cursor: pointer;
 }
 
-/* Цвета кружков */
 .card__color[data-color="#303236"] {
   background-color: #303236;
 }
@@ -79,27 +81,30 @@
   background-color: #795c49;
 }
 
-/* Активный кружок */
 .card__color--active {
   outline: 2px solid #17191b;
-  outline-offset: 3px;
+  outline-offset: 2px;
 }
 
 .card__price {
   color: #17191b;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 700;
 }
 
 .card__info {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 3px;
 }
 
 .card__name {
   color: #687989;
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card__name span {
@@ -109,9 +114,16 @@
 
 .card__description {
   color: #687989;
-  font-size: 17px;
+  font-size: 14px;
+  line-height: 1.1;
 }
 
-.hidden{
-    display: none;
+.hidden {
+  display: none;
+}
+
+.card__part {
+  color: #687989;
+  font-size: 14px;
+  font-weight: 400;
 }

@@ -32,7 +32,7 @@
 }
 
 .link__main {
-  color: white
+  color: white;
 }
 
 .links__navigation {
@@ -50,4 +50,15 @@
 
 .active {
   color: white;
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid #f47b35;
+  width: 100%;
+  height: 1px;
+  bottom: -26px;
+  left: 0;
 }

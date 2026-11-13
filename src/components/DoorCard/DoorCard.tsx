@@ -7,7 +7,7 @@ import type { Door } from "@/data/data";
 
 type DoorCardProps = {
   door: Door;
-  activeCategory: "apartment" | "house";
+  activeCategory?: "apartment" | "house";
 };
 
 const DoorCard = ({ door, activeCategory }: DoorCardProps) => {
@@ -19,7 +19,9 @@ const DoorCard = ({ door, activeCategory }: DoorCardProps) => {
 
   return (
     <div
-      className={`${classes.card__wrapper} ${activeCategory === door.subtype ? "" : classes.hidden} `}
+      className={`${classes.card__wrapper} ${
+        activeCategory && activeCategory !== door.subtype ? classes.hidden : ""
+      }`}
     >
       <div className={classes.card__img}>
         {door.badge && (
@@ -66,6 +68,22 @@ const DoorCard = ({ door, activeCategory }: DoorCardProps) => {
               лист {door.sheetThickness} мм · замки кл. {door.lockClass} · -
               {door.soundInsulation} дБ
             </p>
+          </div>
+        </>
+      )}
+
+      {door.type === "interior" && (
+        <>
+          <div className={classes.card__price}>
+            от {door.price.toLocaleString("ru-RU")} BYN <span className={classes.card__part}>за комплект</span>
+          </div>
+
+          <div className={classes.card__info}>
+            <p className={classes.card__name}>
+              {door.categoryLabel} <span>{door.name}</span>
+            </p>
+
+            <p className={classes.card__description}>{door.description}</p>
           </div>
         </>
       )}

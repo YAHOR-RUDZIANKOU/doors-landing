@@ -6,6 +6,7 @@ import Container from "../Container/Container";
 import { topApartDoors } from "@/data/data";
 import { topHouseDoors } from "@/data/data";
 import DoorCard from "../DoorCard/DoorCard";
+import Link from "next/link";
 
 const PopularDoors = () => {
   const [activeCategory, setActiveCategory] = useState<"apartment" | "house">(
@@ -47,6 +48,7 @@ const PopularDoors = () => {
               ))}
             </>
           </div>
+          <Link href="/catalog" className={classes.btn__link}>Все входные - 16 моделей -&gt;</Link>
         </div>
       </Container>
     </section>

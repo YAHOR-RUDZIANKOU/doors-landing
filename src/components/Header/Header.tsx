@@ -1,11 +1,30 @@
+"use client";
 import Container from "../Container/Container";
 import classes from "./Header.module.css";
 import ContactButton from "../ContactButton/ContactButton";
 import HeaderNavigation from "./HeaderNavigation/HeaderNavigation";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <header className={classes.header}>
+    <header
+      className={`${classes.header} ${
+        isScrolled ? classes.header__scrolled : ""
+      }`}
+    >
       <Container>
         <div className={classes.content__wrapper}>
           <HeaderNavigation />
@@ -19,7 +38,10 @@ const Header = () => {
               </span>
             </div>
 
-            <ContactButton title="Связаться со специалистом" variant='primary' />
+            <ContactButton
+              title="Связаться со специалистом"
+              variant="primary"
+            />
           </div>
         </div>
       </Container>
