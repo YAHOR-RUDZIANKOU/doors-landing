@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import classes from "./DoorCard.module.css";
 import type { Door } from "@/data/data";
+import Link from "next/link";
 
 type DoorCardProps = {
   door: Door;
@@ -61,7 +62,13 @@ const DoorCard = ({ door, activeCategory }: DoorCardProps) => {
 
           <div className={classes.card__info}>
             <p className={classes.card__name}>
-              {door.description} <span>{door.name}</span>
+              {door.description}{" "}
+              <Link
+                href={`/catalog/${door.slug}`}
+                className={classes.card__link}
+              >
+                {door.name}
+              </Link>
             </p>
 
             <p className={classes.card__description}>
@@ -75,12 +82,19 @@ const DoorCard = ({ door, activeCategory }: DoorCardProps) => {
       {door.type === "interior" && (
         <>
           <div className={classes.card__price}>
-            от {door.price.toLocaleString("ru-RU")} BYN <span className={classes.card__part}>за комплект</span>
+            от {door.price.toLocaleString("ru-RU")} BYN{" "}
+            <span className={classes.card__part}>за комплект</span>
           </div>
 
           <div className={classes.card__info}>
             <p className={classes.card__name}>
-              {door.categoryLabel} <span>{door.name}</span>
+              {door.categoryLabel}{" "}
+              <Link
+                href={`/catalog/${door.slug}`}
+                className={classes.card__link}
+              >
+                {door.name}
+              </Link>
             </p>
 
             <p className={classes.card__description}>{door.description}</p>
