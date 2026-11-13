@@ -280,11 +280,13 @@ const CatalogFilters = ({
           {doorColors.map((item) => {
             const isActive = selectedColorIds.includes(item.id);
 
-            const isDisabled = !colorCountCards.some((card) =>
-              card.colorDoor.some(
-                (colorItem) => colorItem.color === item.color,
-              ),
-            );
+            const isDisabled =
+              !isActive &&
+              !colorCountCards.some((card) =>
+                card.colorDoor.some(
+                  (colorItem) => colorItem.color === item.color,
+                ),
+              );
 
             return (
               <button
