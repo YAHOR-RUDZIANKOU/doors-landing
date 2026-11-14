@@ -1,0 +1,11 @@
+.hero {
+  --grid-line: rgba(255, 255, 255, 0.025) 1px, transparent 1px;
+
+  min-height: 280px;
+  padding: 100px 0 20px;
+  background-color: var(--mantine-color-ink-9);
+  background-image:
+    linear-gradient(to right, var(--grid-line)),
+    linear-gradient(to bottom, var(--grid-line));
+  background-size: 40px 40px;
+}

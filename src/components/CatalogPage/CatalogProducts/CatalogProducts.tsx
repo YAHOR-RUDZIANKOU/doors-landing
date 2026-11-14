@@ -1,6 +1,6 @@
+import { SimpleGrid } from "@/ui-kit";
 import type { Door } from "@/data/data";
 import DoorCard from "@/components/DoorCard/DoorCard";
-import classes from "./CatalogProducts.module.css";
 
 type CatalogProductsProps = {
   resultArray: Door[];
@@ -8,11 +8,11 @@ type CatalogProductsProps = {
 
 const CatalogProducts = ({ resultArray }: CatalogProductsProps) => {
   return (
-    <div className={classes.cards__wrapper}>
+    <SimpleGrid cols={4} flex={1}>
       {resultArray.map((card) => (
         <DoorCard key={card.id} door={card} />
       ))}
-    </div>
+    </SimpleGrid>
   );
 };
 

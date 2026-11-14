@@ -1,4 +1,4 @@
-import classes from "./DoorPage.module.css";
+import { Box } from "@/ui-kit";
 import type { Door } from "@/data/data";
 
 type DoorPageProps = {
@@ -6,7 +6,7 @@ type DoorPageProps = {
 };
 
 const DoorPage = ({ currentDoor }: DoorPageProps) => {
-  return <div className={classes.door__wrapper}>DoorPage</div>;
+  return <Box pt={100}>{currentDoor.name}</Box>;
 };
 
 export default DoorPage;

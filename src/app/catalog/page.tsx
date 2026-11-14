@@ -1,9 +1,11 @@
+import { Box } from "@/ui-kit";
 import CatalogPage from "@/components/CatalogPage/CatalogPage";
+
 const Catalog = () => {
   return (
-    <main>
+    <Box component="main">
       <CatalogPage />
-    </main>
+    </Box>
   );
 };
 

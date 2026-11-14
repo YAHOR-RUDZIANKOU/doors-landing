@@ -1,107 +1,86 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import classes from "./DoorCard.module.css";
+import {
+  Badge,
+  Card,
+  ColorSwatchButton,
+  Group,
+  Image,
+  Link,
+  Stack,
+  Text,
+} from "@/ui-kit";
+import { getDoorRoute } from "@/navigation";
 import type { Door } from "@/data/data";
-import Link from "next/link";
 
 type DoorCardProps = {
   door: Door;
-  activeCategory?: "apartment" | "house";
 };
 
-const DoorCard = ({ door, activeCategory }: DoorCardProps) => {
+const DoorCard = ({ door }: DoorCardProps) => {
   const [activeColor, setActiveColor] = useState(0);
 
   const selectedColor = door.colorDoor[activeColor];
-
   const imageUrl = selectedColor?.urlImg || door.url;
 
-  return (
-    <div
-      className={`${classes.card__wrapper} ${
-        activeCategory && activeCategory !== door.subtype ? classes.hidden : ""
-      }`}
-    >
-      <div className={classes.card__img}>
-        {door.badge && (
-          <span className={classes.card__badge}>{door.badge}</span>
-        )}
+  const isEntrance = door.type === "entrance";
+  const doorRoute = getDoorRoute(door.slug);
 
+  return (
+    <Stack gap="xs">
+      <Card
+        radius="lg"
+        ratio={0.9}
+        href={doorRoute}
+        linkLabel={door.name}
+        topLeft={door.badge && <Badge>{door.badge}</Badge>}
+        bottomLeft={
+          <Group gap="xs">
+            {door.colorDoor.map((item, index) => (
+              <ColorSwatchButton
+                key={item.color}
+                color={item.color}
+                size={20}
+                withBorder
+                selected={activeColor === index}
+                onClick={() => setActiveColor(index)}
+                aria-label={`Выбрать цвет ${item.color}`}
+              />
+            ))}
+          </Group>
+        }
+      >
         <Image
-          className={classes.card__image}
           src={imageUrl}
           alt={`Входная дверь ${door.name}`}
           width={300}
           height={400}
         />
+      </Card>
 
-        <div className={classes.card__colors}>
-          {door.colorDoor.map((item, index) => (
-            <button
-              key={item.color}
-              type="button"
-              className={`${classes.card__color} ${
-                activeColor === index ? classes["card__color--active"] : ""
-              }`}
-              data-color={item.color}
-              onClick={() => setActiveColor(index)}
-              aria-label={`Выбрать цвет ${item.color}`}
-              aria-pressed={activeColor === index}
-            />
-          ))}
-        </div>
-      </div>
+      <Text fz="xl" fw={700}>
+        от {door.price.toLocaleString("ru-RU")} BYN{" "}
+        {!isEntrance && (
+          <Text span tone="muted" fz="sm" fw={400}>
+            за комплект
+          </Text>
+        )}
+      </Text>
 
-      {door.type === "entrance" && (
-        <>
-          <div className={classes.card__price}>
-            от {door.price.toLocaleString("ru-RU")} BYN
-          </div>
+      <Text tone="muted" truncate>
+        {isEntrance ? door.description : door.categoryLabel}{" "}
+        <Link href={doorRoute} fw={500}>
+          {door.name}
+        </Link>
+      </Text>
 
-          <div className={classes.card__info}>
-            <p className={classes.card__name}>
-              {door.description}{" "}
-              <Link
-                href={`/catalog/${door.slug}`}
-                className={classes.card__link}
-              >
-                {door.name}
-              </Link>
-            </p>
-
-            <p className={classes.card__description}>
-              лист {door.sheetThickness} мм · замки кл. {door.lockClass} · -
-              {door.soundInsulation} дБ
-            </p>
-          </div>
-        </>
-      )}
-
-      {door.type === "interior" && (
-        <>
-          <div className={classes.card__price}>
-            от {door.price.toLocaleString("ru-RU")} BYN{" "}
-            <span className={classes.card__part}>за комплект</span>
-          </div>
-
-          <div className={classes.card__info}>
-            <p className={classes.card__name}>
-              {door.categoryLabel}{" "}
-              <Link
-                href={`/catalog/${door.slug}`}
-                className={classes.card__link}
-              >
-                {door.name}
-              </Link>
-            </p>
-
-            <p className={classes.card__description}>{door.description}</p>
-          </div>
-        </>
-      )}
-    </div>
+      <Text tone="muted" fz="sm">
+        {isEntrance
+          ? `лист ${door.sheetThickness} мм · замки кл. ${door.lockClass} · -${door.soundInsulation} дБ`
+          : door.description}
+      </Text>
+    </Stack>
   );
 };
 

@@ -1,39 +1,39 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import classes from "./HeaderNavigation.module.css";
+import { Group, Link } from "@/ui-kit";
+import { PAGE_TITLES, ROUTES } from "@/navigation";
+import LogoIcon from "@/components/LogoIcon/LogoIcon";
+import NavLink from "../NavLink/NavLink";
+
+const navLinks = [
+  { href: ROUTES.catalog, label: PAGE_TITLES.catalog },
+  { href: ROUTES.contacts, label: PAGE_TITLES.contacts },
+];
 
 const HeaderNavigation = () => {
   const pathname = usePathname();
 
   return (
-    <div className={classes.links__wrapper}>
-      <Link href="/" className={classes.link__logo}>
-        <span className={classes.logoIcon} />
-        <span className={classes.link__main}>СТАЛЬНАЯ ЛИНИЯ</span>
+    <Group gap="xl">
+      <Link href={ROUTES.home} tone="inverse" fz="xl" fw={700}>
+        <Group gap="sm">
+          <LogoIcon />
+          СТАЛЬНАЯ ЛИНИЯ
+        </Group>
       </Link>
 
-      <nav className={classes.links__navigation}>
-        <Link
-          href="/catalog"
-          className={`${classes.link__text} ${
-            pathname === "/catalog" ? classes.active : ""
-          }`}
-        >
-          Каталог
-        </Link>
-
-        <Link
-          href="/contacts"
-          className={`${classes.link__text} ${
-            pathname === "/contacts" ? classes.active : ""
-          }`}
-        >
-          Контакты
-        </Link>
-      </nav>
-    </div>
+      <Group component="nav" gap="xl">
+        {navLinks.map((link) => (
+          <NavLink
+            key={link.href}
+            href={link.href}
+            label={link.label}
+            isActive={pathname === link.href}
+          />
+        ))}
+      </Group>
+    </Group>
   );
 };
 

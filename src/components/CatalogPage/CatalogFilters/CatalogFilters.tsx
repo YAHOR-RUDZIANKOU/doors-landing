@@ -1,10 +1,19 @@
 "use client";
 
-import classes from "./CatalogFilters.module.css";
 import { entranceFilters, interiorFilters } from "@/data/dataFilters";
 import { getDoorCount } from "@/utils/doorUtils";
 import { allDoors } from "@/data/data";
-import { RangeSlider } from "@mantine/core";
+import {
+  CheckboxCard,
+  ColorSwatchButton,
+  Group,
+  RadioCard,
+  RangeSlider,
+  Stack,
+  Text,
+  Title,
+  ToggleButton,
+} from "@/ui-kit";
 import { sheetThicknessOptions } from "@/data/dataFilters";
 import { doorColors } from "@/data/dataFilters";
 import { materialFilters } from "@/data/dataFilters";
@@ -58,225 +67,152 @@ const CatalogFilters = ({
   glassCountCards,
 }: CatalogFiltersProps) => {
   return (
-    <aside className={classes.catalog__filters}>
-      <div className={classes.filters__type}>
-        <h3 className={classes.filters__title}>Тип дверей</h3>
+    <Stack component="aside" gap="lg" w={270} pos="sticky" top={100}>
+      <Stack gap="sm">
+        <Title order={3}>Тип дверей</Title>
 
-        <div className={classes.filters__group}>
-          {entranceFilters.map((item, index) => {
-            const isActive =
-              activeFilter.type === item.type &&
-              activeFilter.subtype === item.subtype;
+        {[entranceFilters, interiorFilters].map((group) => (
+          <Stack key={group[0].type} gap={0}>
+            {group.map((item, index) => {
+              const isActive =
+                activeFilter.type === item.type &&
+                activeFilter.subtype === item.subtype;
+              const isMain = index === 0;
 
-            const itemClass =
-              index === 0
-                ? classes["filters__item--main"]
-                : classes["filters__item--sub"];
-
-            return (
-              <label
-                key={item.label}
-                className={`${classes.filters__item} ${itemClass} ${
-                  isActive ? classes["filters__item--active"] : ""
-                }`}
-              >
-                <input
-                  type="radio"
+              return (
+                <RadioCard
+                  key={item.label}
                   name="doorType"
                   checked={isActive}
-                  onChange={() => handleFilterChange(item.type, item.subtype)}
-                />
+                  pl={isMain ? "sm" : "xl"}
+                  onClick={() => handleFilterChange(item.type, item.subtype)}
+                >
+                  <Text span flex={1} fw={isMain ? 600 : 400}>
+                    {item.label}
+                  </Text>
 
-                <span className={classes.filters__label}>{item.label}</span>
+                  <Text span tone="muted" fz="sm">
+                    {getDoorCount({
+                      allDoors,
+                      type: item.type,
+                      subtype: item.subtype,
+                    })}
+                  </Text>
+                </RadioCard>
+              );
+            })}
+          </Stack>
+        ))}
+      </Stack>
 
-                <span className={classes.filters__count}>
-                  {getDoorCount({
-                    allDoors,
-                    type: item.type,
-                    subtype: item.subtype,
-                  })}
-                </span>
-              </label>
-            );
-          })}
-        </div>
+      <Stack gap="lg">
+        <Group justify="space-between">
+          <Title order={3}>Цена, BYN</Title>
 
-        <div className={classes.filters__group}>
-          {interiorFilters.map((item, index) => {
-            const isActive =
-              activeFilter.type === item.type &&
-              activeFilter.subtype === item.subtype;
-
-            const itemClass =
-              index === 0
-                ? classes["filters__item--main"]
-                : classes["filters__item--sub"];
-
-            return (
-              <label
-                key={item.label}
-                className={`${classes.filters__item} ${itemClass} ${
-                  isActive ? classes["filters__item--active"] : ""
-                }`}
-              >
-                <input
-                  type="radio"
-                  name="doorType"
-                  checked={isActive}
-                  onChange={() => handleFilterChange(item.type, item.subtype)}
-                />
-
-                <span className={classes.filters__label}>{item.label}</span>
-
-                <span className={classes.filters__count}>
-                  {getDoorCount({
-                    allDoors,
-                    type: item.type,
-                    subtype: item.subtype,
-                  })}
-                </span>
-              </label>
-            );
-          })}
-        </div>
-      </div>
-      <div className={classes.price__wrapper}>
-        <div className={classes.price__header}>
-          <h3 className={classes.price__title}>Цена, BYN</h3>
-
-          <span className={classes.price__value}>
+          <Text fw={500}>
             {priceRange[0].toLocaleString("ru-RU")} —{" "}
             {priceRange[1].toLocaleString("ru-RU")}
-          </span>
-        </div>
+          </Text>
+        </Group>
 
         <RangeSlider
-          classNames={{
-            root: classes.price__slider,
-            track: classes.price__track,
-            bar: classes.price__bar,
-            thumb: classes.price__thumb,
-          }}
           min={priceStatic[activeFilter.type].min}
           max={priceStatic[activeFilter.type].max}
           value={priceRange}
           onChange={(value) => setPriceRange(value)}
-          label={null}
         />
-      </div>
+      </Stack>
+
       {activeFilter.type === "entrance" && (
-        <div className={classes.sheet__wrapper}>
-          <h3 className={classes.sheet__title}>Толщина наружного листа</h3>
+        <Stack gap="sm">
+          <Title order={3}>Толщина наружного листа</Title>
 
-          <div className={classes.sheet__items}>
+          <Group gap="xs">
             {sheetThicknessOptions.map((item) => {
-              const isActive = selectedSheetThickness.includes(item.value);
-
               const count = getCount({
                 allDoors: sheetThicknessCountCards,
                 predicate: (door) => door.sheetThickness === item.value,
               });
 
-              const isDisabled = count === 0;
-
               return (
-                <button
+                <ToggleButton
                   key={item.value}
-                  type="button"
-                  disabled={isDisabled}
-                  className={`${classes.sheet__item} ${
-                    isActive ? classes["sheet__item--active"] : ""
-                  } ${isDisabled ? classes["sheet__item--disabled"] : ""}`}
+                  active={selectedSheetThickness.includes(item.value)}
+                  disabled={count === 0}
+                  count={count}
                   onClick={() => handleSheetThicknessChange(item.value)}
                 >
-                  <span className={classes.sheet__value}>{item.value} мм</span>
-                  <span className={classes.sheet__count}>{count}</span>
-                </button>
+                  {item.value} мм
+                </ToggleButton>
               );
             })}
-          </div>
-        </div>
+          </Group>
+        </Stack>
       )}
+
       {activeFilter.type === "interior" && (
         <>
-          <div className={classes.material__wrapper}>
-            <h3 className={classes.material__title}>Материал</h3>
+          <Stack gap="sm">
+            <Title order={3}>Материал</Title>
 
-            <div className={classes.material__items}>
+            <Stack gap={0}>
               {materialFilters.map((item) => {
-                const isActive = selectedMaterials.includes(item.value);
-
                 const count = getCount({
                   allDoors: materialCountCards,
                   predicate: (door) => door.material === item.value,
                 });
 
-                const isDisabled = count === 0;
-
                 return (
-                  <label
+                  <CheckboxCard
                     key={item.id}
-                    className={`${classes.material__item} ${
-                      isDisabled ? classes["material__item--disabled"] : ""
-                    }`}
+                    checked={selectedMaterials.includes(item.value)}
+                    disabled={count === 0}
+                    onClick={() => handleMaterialChange(item.value)}
                   >
-                    <input
-                      type="checkbox"
-                      checked={isActive}
-                      disabled={isDisabled}
-                      className={`${classes.material__checkbox} ${
-                        isActive ? classes["material__checkbox--active"] : ""
-                      }`}
-                      onChange={() => handleMaterialChange(item.value)}
-                    />
-
-                    <span className={classes.material__label}>
+                    <Text span flex={1}>
                       {item.value}
-                    </span>
+                    </Text>
 
-                    <span className={classes.material__count}>{count}</span>
-                  </label>
+                    <Text span tone="muted" fz="sm">
+                      {count}
+                    </Text>
+                  </CheckboxCard>
                 );
               })}
-            </div>
-          </div>
-          <div className={classes.glass__wrapper}>
-            <h3 className={classes.glass__title}>Остекление</h3>
+            </Stack>
+          </Stack>
 
-            <div className={classes.glass__items}>
+          <Stack gap="sm">
+            <Title order={3}>Остекление</Title>
+
+            <Group gap="xs">
               {glassFilters.map((item) => {
-                const isActive = selectedGlass.includes(item.value);
-
                 const count = getCount({
                   allDoors: glassCountCards,
                   predicate: (door) => door.hasGlass === item.value,
                 });
 
-                const isDisabled = count === 0;
-
                 return (
-                  <button
+                  <ToggleButton
                     key={item.id}
-                    type="button"
-                    disabled={isDisabled}
-                    className={`${classes.glass__item} ${
-                      isActive ? classes["glass__item--active"] : ""
-                    } ${isDisabled ? classes["glass__item--disabled"] : ""}`}
+                    active={selectedGlass.includes(item.value)}
+                    disabled={count === 0}
+                    count={count}
                     onClick={() => handleGlassChange(item.value)}
                   >
-                    <span>{item.label}</span>
-                    <span className={classes.glass__count}>{count}</span>
-                  </button>
+                    {item.label}
+                  </ToggleButton>
                 );
               })}
-            </div>
-          </div>
+            </Group>
+          </Stack>
         </>
       )}
-      <div className={classes.color__wrapper}>
-        <h3 className={classes.color__title}>Цвет двери</h3>
 
-        <div className={classes.color__items}>
+      <Stack gap="sm">
+        <Title order={3}>Цвет двери</Title>
+
+        <Group gap="md">
           {doorColors.map((item) => {
             const isActive = selectedColorIds.includes(item.id);
 
@@ -289,23 +225,19 @@ const CatalogFilters = ({
               );
 
             return (
-              <button
+              <ColorSwatchButton
                 key={item.id}
-                type="button"
+                color={item.color}
+                selected={isActive}
                 disabled={isDisabled}
-                className={`${classes.color__item} ${
-                  isActive ? classes["color__item--active"] : ""
-                } ${isDisabled ? classes["color__item--disabled"] : ""}`}
-                style={{ backgroundColor: item.color }}
                 onClick={() => handleColorChange(item.id)}
-                aria-label={`Выбрать цвет ${item.color}`}
-                aria-pressed={isActive}
+                aria-label={`Выбрать цвет ${item.name}`}
               />
             );
           })}
-        </div>
-      </div>
-    </aside>
+        </Group>
+      </Stack>
+    </Stack>
   );
 };
 

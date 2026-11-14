@@ -1,12 +1,18 @@
 "use client";
 
 import CatalogFilters from "./CatalogFilters/CatalogFilters";
-import { Select } from "@mantine/core";
+import {
+  Box,
+  Container,
+  Divider,
+  Flex,
+  Group,
+  Select,
+  Stack,
+  Text,
+} from "@/ui-kit";
 import { useState } from "react";
-import Link from "next/link";
-import classes from "./CatalogPage.module.css";
 import { catalogContent } from "@/data/data";
-import Container from "../Container/Container";
 import type { Door } from "@/data/data";
 import { priceStatic } from "@/data/dataFilters";
 import { sortOptions } from "@/data/dataFilters";
@@ -18,6 +24,7 @@ import { doorColors } from "@/data/dataFilters";
 import { getWordForm } from "@/utils/doorUtils";
 import useDoorFilters from "@/hook/useDoorFilters";
 import ActiveFilters from "./ActiveFilters/ActiveFilters";
+import CatalogHero from "./CatalogHero/CatalogHero";
 
 type SortBy = "rating" | "rich" | "cheap";
 
@@ -106,23 +113,31 @@ const CatalogPage = () => {
     currentColors,
   });
 
-  const sortedCards = [...resultCards];
-  if (sortBy === "rating") {
-    sortedCards.sort((a, b) => b.rating - a.rating);
-  } else if (sortBy === "rich") {
-    sortedCards.sort((a, b) => b.price - a.price);
-  } else if (sortBy === "cheap") {
-    sortedCards.sort((a, b) => a.price - b.price);
-  }
+  const getSortedCards = () => {
+    const sortedCards = [...resultCards];
+    if (sortBy === "rating") {
+      sortedCards.sort((a, b) => b.rating - a.rating);
+    } else if (sortBy === "rich") {
+      sortedCards.sort((a, b) => b.price - a.price);
+    } else if (sortBy === "cheap") {
+      sortedCards.sort((a, b) => a.price - b.price);
+    }
+    return sortedCards;
+  };
 
-  const hasActiveFilters =
-    activeFilter.subtype !== null ||
+  const sortedCards = getSortedCards();
+
+  const getHasActiveFilters = () => {
+    return activeFilter.subtype !== null ||
     selectedSheetThickness.length > 0 ||
     selectedColorIds.length > 0 ||
     selectedMaterials.length > 0 ||
     selectedGlass.length > 0 ||
     priceRange[0] !== priceStatic[activeFilter.type].min ||
     priceRange[1] !== priceStatic[activeFilter.type].max;
+  }
+
+  const hasActiveFilters = getHasActiveFilters();
 
   const handleResetFilters = () => {
     setActiveFilter({
@@ -146,59 +161,37 @@ const CatalogPage = () => {
 
   return (
     <>
-      <div className={classes.catalog__wrapper}>
-        <Container>
-          <div className={classes.catalog__header}>
-            <nav className={classes.catalog__link} aria-label="Хлебные крошки">
-              <Link href="/">Главная</Link>
-              <span>/</span>
-              <Link href="/catalog">Каталог</Link>
-              <span>/</span>
-              <span aria-current="page">
-                {catalogContent[activeFilter.type].title}
-              </span>
-            </nav>
+      <CatalogHero
+        title={catalogContent[activeFilter.type].title}
+        subtitle={catalogContent[activeFilter.type].subtitle}
+      />
 
-            <h1 className={classes.catalog__title}>
-              {catalogContent[activeFilter.type].title}
-            </h1>
-
-            <p className={classes.catalog__subtitle}>
-              {catalogContent[activeFilter.type].subtitle}
-            </p>
-          </div>
-        </Container>
-      </div>
       <Container>
-        <div className={classes.catalog__toolbar}>
-          <div className={classes.toolbar__sort}>
-            {resultCards.length > 0 ? (
-              <div className={classes.toolbar__title}>
-                {`Найдено: ${resultCards.length} ${getWordForm(
-                  resultCards.length,
-                  ["модель", "модели", "моделей"],
-                )}`}
-              </div>
-            ) : (
-              <div className={classes.toolbar__title}>
-                Ни одной модели не найдено
-              </div>
-            )}
-            <Select
-              classNames={{
-                root: classes.catalog__sort,
-                input: classes.catalog__sortInput,
-                dropdown: classes.catalog__sortDropdown,
-                option: classes.catalog__sortOption,
-              }}
-              data={sortOptions}
-              value={sortBy}
-              onChange={(value) => setSortBy(value as SortBy)}
-              allowDeselect={false}
-              rightSection={<span className={classes.catalog__sortArrow} />}
-              rightSectionPointerEvents="none"
-            />
-          </div>
+        <Stack gap="lg" pb="xl">
+          <Box>
+            <Group justify="flex-end" gap="lg" py="lg">
+              <Text fz="lg" fw={600}>
+                {resultCards.length > 0
+                  ? `Найдено: ${resultCards.length} ${getWordForm(
+                      resultCards.length,
+                      ["модель", "модели", "моделей"],
+                    )}`
+                  : "Ни одной модели не найдено"}
+              </Text>
+
+              <Select
+                w={260}
+                data={sortOptions}
+                value={sortBy}
+                onChange={(value) => setSortBy(value as SortBy)}
+                allowDeselect={false}
+                aria-label="Сортировка"
+              />
+            </Group>
+
+            <Divider />
+          </Box>
+
           {hasActiveFilters && (
             <ActiveFilters
               filters={{
@@ -221,7 +214,7 @@ const CatalogPage = () => {
             />
           )}
 
-          <div className={classes.catalog__content}>
+          <Flex gap="xl" align="flex-start">
             <CatalogFilters
               activeFilter={activeFilter}
               priceRange={priceRange}
@@ -242,8 +235,8 @@ const CatalogPage = () => {
               glassCountCards={glassCountCards}
             />
             <CatalogProducts resultArray={sortedCards} />
-          </div>
-        </div>
+          </Flex>
+        </Stack>
       </Container>
     </>
   );

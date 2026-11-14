@@ -1,5 +1,7 @@
+import { Box } from "@/ui-kit";
+
 const Contacts = () => {
-  return <div>Контакты</div>;
+  return <Box>Контакты</Box>;
 };
 
 export default Contacts;

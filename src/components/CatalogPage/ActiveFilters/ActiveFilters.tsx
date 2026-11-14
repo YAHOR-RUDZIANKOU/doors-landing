@@ -1,6 +1,5 @@
+import { Button, Group, Tag } from "@/ui-kit";
 import type { Door } from "@/data/data";
-import classes from "./ActiveFilters.module.css";
-import ActiveFilterTag from "@/components/ActiveFilterTag/ActiveFilterTag";
 import { doorColors, priceStatic } from "@/data/dataFilters";
 
 type ActiveFilter = {
@@ -39,70 +38,70 @@ type ActiveFiltersProps = {
 
 const ActiveFilters = ({ filters, handlers }: ActiveFiltersProps) => {
   return (
-    <div className={classes.tab__wrapper}>
+    <Group gap="xs">
       {filters.activeFilter.subtype === "apartment" && (
-        <ActiveFilterTag
-          title="Для квартиры"
+        <Tag
+          label="Для квартиры"
           onRemove={() => handlers.handleFilterChange("entrance", null)}
         />
       )}
 
       {filters.activeFilter.subtype === "house" && (
-        <ActiveFilterTag
-          title="Для дома"
+        <Tag
+          label="Для дома"
           onRemove={() => handlers.handleFilterChange("entrance", null)}
         />
       )}
 
       {filters.activeFilter.subtype === "swing" && (
-        <ActiveFilterTag
-          title="Распашные"
+        <Tag
+          label="Распашные"
           onRemove={() => handlers.handleFilterChange("interior", null)}
         />
       )}
 
       {filters.activeFilter.subtype === "sliding" && (
-        <ActiveFilterTag
-          title="Раздвижные"
+        <Tag
+          label="Раздвижные"
           onRemove={() => handlers.handleFilterChange("interior", null)}
         />
       )}
 
       {filters.activeFilter.subtype === "hidden" && (
-        <ActiveFilterTag
-          title="Скрытые"
+        <Tag
+          label="Скрытые"
           onRemove={() => handlers.handleFilterChange("interior", null)}
         />
       )}
 
       {filters.selectedSheetThickness.map((value) => (
-        <ActiveFilterTag
+        <Tag
           key={value}
-          title={`Лист ${value} мм`}
+          label={`Лист ${value} мм`}
           onRemove={() => handlers.handleSheetThicknessChange(value)}
         />
       ))}
 
       {filters.selectedMaterials.map((value) => (
-        <ActiveFilterTag
+        <Tag
           key={value}
-          title={value}
+          label={value}
           onRemove={() => handlers.handleMaterialChange(value)}
         />
       ))}
 
       {filters.selectedGlass.map((value) => (
-        <ActiveFilterTag
+        <Tag
           key={String(value)}
-          title={value ? "С остеклением" : "Без остекления"}
+          label={value ? "С остеклением" : "Без остекления"}
           onRemove={() => handlers.handleGlassChange(value)}
         />
       ))}
 
       {filters.currentColors.map((value) => (
-        <ActiveFilterTag
+        <Tag
           key={value.color}
-          title={value.name}
+          label={value.name}
           onRemove={() => {
             const color = doorColors.find((item) => item.color === value.color);
 
@@ -113,20 +112,16 @@ const ActiveFilters = ({ filters, handlers }: ActiveFiltersProps) => {
 
       {priceStatic[filters.activeFilter.type].min !== filters.priceRange[0] ||
       priceStatic[filters.activeFilter.type].max !== filters.priceRange[1] ? (
-        <ActiveFilterTag
-          title={`${filters.priceRange[0].toLocaleString("ru-RU")}-${filters.priceRange[1].toLocaleString("ru-RU")} BYN`}
+        <Tag
+          label={`${filters.priceRange[0].toLocaleString("ru-RU")}-${filters.priceRange[1].toLocaleString("ru-RU")} BYN`}
           onRemove={handlers.handlePriceReset}
         />
       ) : null}
 
-      <button
-        type="button"
-        className={classes.delete__filters}
-        onClick={handlers.handleResetFilters}
-      >
+      <Button variant="text" onClick={handlers.handleResetFilters}>
         Сбросить всё
-      </button>
-    </div>
+      </Button>
+    </Group>
   );
 };
 

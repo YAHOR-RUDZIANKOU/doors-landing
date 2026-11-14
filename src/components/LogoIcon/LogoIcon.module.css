@@ -1,0 +1,15 @@
+.door {
+  position: relative;
+  width: 22px;
+  height: 36px;
+  border: 2px solid var(--mantine-color-white);
+}
+
+.handle {
+  position: absolute;
+  top: 13px;
+  right: 3px;
+  width: 3px;
+  height: 8px;
+  background-color: var(--mantine-color-brand-5);
+}

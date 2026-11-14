@@ -1,67 +1,77 @@
-import classes from "./DesignSelection.module.css";
-import Container from "../Container/Container";
-import Image from "next/image";
+import {
+  Box,
+  Card,
+  Container,
+  Group,
+  Image,
+  Section,
+  SimpleGrid,
+  Stack,
+  Text,
+  Title,
+} from "@/ui-kit";
 import ContactButton from "../ContactButton/ContactButton";
+import SketchIcon from "../SketchIcon/SketchIcon";
 import { designCards } from "@/data/data";
 
 export default function DesignSelection() {
   return (
-    <section className={classes.design}>
+    <Section pt={160}>
       <Container>
-        <div className={classes.design__wrapper}>
-          <div className={classes.design__title}>
-            <h2>
-              Отделка, цвет и рисунок
-              <br />— на ваш выбор
-            </h2>
-          </div>
+        <Stack gap="lg">
+          <Title order={2}>Отделка, цвет и рисунок — на ваш выбор</Title>
 
-          <div className={classes.design__subtitle}>
-            <p>
-              Порошковая окраска, МДФ-панели с фрезеровкой, эмаль, зеркало
-              внутри. 8 цветов и любой оттенок по RAL под заказ.
-            </p>
-          </div>
+          <Text tone="muted" fz="sm">
+            Порошковая окраска, МДФ-панели с фрезеровкой, эмаль, зеркало внутри.
+            8 цветов и любой оттенок по RAL под заказ.
+          </Text>
 
-          <div className={classes.design__cards}>
+          <SimpleGrid cols={designCards.length} spacing="sm">
             {designCards.map((card) => (
-              <div className={classes.design__card} key={card.id}>
-                <div className={classes.design__cardImage}>
+              <Stack key={card.id} gap="xs">
+                <Card radius="xs" h={172}>
                   <Image
                     src={card.image}
                     alt={card.title}
                     width={300}
                     height={400}
-                    className={classes.design__image}
                   />
-                </div>
+                </Card>
 
-                <div className={classes.design__cardContent}>
-                  <h3>{card.title}</h3>
-                  <p>{card.subtitle}</p>
-                </div>
-              </div>
+                <Box>
+                  <Text fz="xs" fw={600}>
+                    {card.title}
+                  </Text>
+                  <Text tone="muted" fz="xs">
+                    {card.subtitle}
+                  </Text>
+                </Box>
+              </Stack>
             ))}
-          </div>
+          </SimpleGrid>
 
-          <div className={classes.design__bottom}>
-            <div className={classes.design__bottomIcon}>
-              <span />
-            </div>
+          <Card variant="outlined" radius="xs">
+            <Group gap="lg" wrap="nowrap">
+              <SketchIcon />
 
-            <div className={classes.design__bottomText}>
-              <h3>Можем сделать по вашему эскизу</h3>
-              <p>
-                Рисунок фрезеровки, сочетание цветов, вставки — пришлите
-                набросок или фото, технолог скажет, что получится и сколько
-                стоит.
-              </p>
-            </div>
+              <Box flex={1}>
+                <Title order={3}>Можем сделать по вашему эскизу</Title>
+                <Text tone="muted" fz="xs">
+                  Рисунок фрезеровки, сочетание цветов, вставки — пришлите
+                  набросок или фото, технолог скажет, что получится и сколько
+                  стоит.
+                </Text>
+              </Box>
 
-            <ContactButton title="Обсудить эскиз" variant="secondary" requestText="Дверь по моему эскизу - пришлю набросок после звонка" />
-          </div>
-        </div>
+              <ContactButton
+                title="Обсудить эскиз"
+                variant="secondary"
+                requestText="Дверь по моему эскизу - пришлю набросок после звонка"
+              />
+            </Group>
+          </Card>
+        </Stack>
       </Container>
-    </section>
+    </Section>
   );
 }

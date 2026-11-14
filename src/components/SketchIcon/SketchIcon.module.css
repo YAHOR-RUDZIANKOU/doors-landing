@@ -1,0 +1,18 @@
+.frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 54px;
+  border: 1px dashed var(--mantine-color-ink-3);
+}
+
+.circle {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--mantine-color-brand-5);
+  border-radius: 50%;
+  background-color: var(--mantine-color-ink-0);
+}

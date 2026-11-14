@@ -1,36 +1,32 @@
 "use client";
-import { useState } from "react";
-import classes from "./ContactButton.module.css";
-import ConsultationFormWrapper from "../ConsultationForm/ConsultationFormWrapper/ConsultationFormWrapper";
+
+import { useDisclosure } from "@mantine/hooks";
+import { Button } from "@/ui-kit";
+import ConsultationForm from "../ConsultationForm/ConsultationForm";
 
 type ContactButtonProps = {
   title: string;
   variant: "primary" | "secondary" | "text";
-  requestText?: string|null;
-};
-
-const variantClasses = {
-  primary: classes["contact__btn--primary"],
-  secondary: classes["contact__btn--secondary"],
-  text: classes["contact__btn--text"],
+  requestText?: string | null;
 };
 
 const ContactButton = ({ title, variant, requestText }: ContactButtonProps) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [opened, { open, close }] = useDisclosure(false);
+
   return (
     <>
-      <button
-        onClick={() => setIsOpen(true)}
-        className={`${classes.contact__btn} ${variantClasses[variant]}`}
+      <Button
+        variant={variant}
+        size={variant === "primary" ? "lg" : "md"}
+        onClick={open}
       >
         {title}
-      </button>
-      {isOpen && (
-        <ConsultationFormWrapper
-          setIsOpen={setIsOpen}
-          requestText={requestText}
-        />
-      )}
+      </Button>
+      <ConsultationForm
+        opened={opened}
+        onClose={close}
+        requestText={requestText}
+      />
     </>
   );
 };
