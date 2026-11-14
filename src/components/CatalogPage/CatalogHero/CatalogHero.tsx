@@ -21,13 +21,15 @@ const CatalogHero = ({ title, subtitle }: CatalogHeroProps) => {
             </Text>
           </Breadcrumbs>
 
-          <Title order={1} tone="inverse">
-            {title}
-          </Title>
+  
+            <Title order={1} tone="inverse">
+              {title}
+            </Title>
 
-          <Text tone="inverseMuted" fz="lg">
-            {subtitle}
-          </Text>
+            <Text mih={55} tone="inverseMuted" fz="lg">
+              {subtitle}
+            </Text>
+
         </Stack>
       </Container>
     </div>

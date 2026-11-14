@@ -67,28 +67,30 @@ const DoorCard = ({ door }: DoorCardProps) => {
         )}
       </Text>
 
-      <Text tone="muted" truncate>
-        {isEntrance
-          ? door.purpose === "apartment"
-            ? "Входная в квартиру"
-            : "Входная в дом"
-          : "Межкомнатная"}{" "}
-        <Link href={doorRoute} fw={500}>
-          {door.name}
-        </Link>
-      </Text>
+      <Stack gap={2}>
+        <Text tone="muted" truncate>
+          {isEntrance
+            ? door.purpose === "apartment"
+              ? "Входная в квартиру"
+              : "Входная в дом"
+            : "Межкомнатная"}{" "}
+          <Link href={doorRoute} fw={500}>
+            {door.name}
+          </Link>
+        </Text>
 
-      <Text tone="muted" fz="sm">
-        {isEntrance
-          ? [
-              doorSeries?.metalLeafMm && `лист ${doorSeries.metalLeafMm} мм`,
-              `полотно ${doorSeries?.leafThicknessMm} мм`,
-              doorSeries?.noiseDbMin && `-${doorSeries.noiseDbMin} дБ`,
-            ]
-              .filter(Boolean)
-              .join(" · ")
-          : door.description}
-      </Text>
+        <Text tone="muted" fz="sm">
+          {isEntrance
+            ? [
+                doorSeries?.metalLeafMm && `лист ${doorSeries.metalLeafMm} мм`,
+                `полотно ${doorSeries?.leafThicknessMm} мм`,
+                doorSeries?.noiseDbMin && `-${doorSeries.noiseDbMin} дБ`,
+              ]
+                .filter(Boolean)
+                .join(" · ")
+            : door.description}
+        </Text>
+      </Stack>
     </Stack>
   );
 };

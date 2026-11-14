@@ -125,14 +125,16 @@ const CatalogPage = () => {
   const sortedCards = getSortedCards();
 
   const getHasActiveFilters = () => {
-    return activeFilter.subtype !== null ||
-    selectedSheetThickness.length > 0 ||
-    selectedColorIds.length > 0 ||
-    selectedMaterials.length > 0 ||
-    selectedGlass.length > 0 ||
-    priceRange[0] !== priceStatic[activeFilter.type].min ||
-    priceRange[1] !== priceStatic[activeFilter.type].max;
-  }
+    return (
+      activeFilter.subtype !== null ||
+      selectedSheetThickness.length > 0 ||
+      selectedColorIds.length > 0 ||
+      selectedMaterials.length > 0 ||
+      selectedGlass.length > 0 ||
+      priceRange[0] !== priceStatic[activeFilter.type].min ||
+      priceRange[1] !== priceStatic[activeFilter.type].max
+    );
+  };
 
   const hasActiveFilters = getHasActiveFilters();
 
@@ -189,27 +191,29 @@ const CatalogPage = () => {
             <Divider />
           </Box>
 
-          {hasActiveFilters && (
-            <ActiveFilters
-              filters={{
-                activeFilter,
-                priceRange,
-                selectedSheetThickness,
-                selectedMaterials,
-                selectedGlass,
-                currentColors,
-              }}
-              handlers={{
-                handleFilterChange,
-                handleSheetThicknessChange,
-                handleMaterialChange,
-                handleGlassChange,
-                handleColorChange,
-                handlePriceReset,
-                handleResetFilters,
-              }}
-            />
-          )}
+          <Box mih={32}>
+            {hasActiveFilters && (
+              <ActiveFilters
+                filters={{
+                  activeFilter,
+                  priceRange,
+                  selectedSheetThickness,
+                  selectedMaterials,
+                  selectedGlass,
+                  currentColors,
+                }}
+                handlers={{
+                  handleFilterChange,
+                  handleSheetThicknessChange,
+                  handleMaterialChange,
+                  handleGlassChange,
+                  handleColorChange,
+                  handlePriceReset,
+                  handleResetFilters,
+                }}
+              />
+            )}
+          </Box>
 
           <Flex gap="xl" align="flex-start">
             <CatalogFilters
