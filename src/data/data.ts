@@ -1,3 +1,5 @@
+import doorsJson from "./doors.json";
+
 export const designCards = [
   {
     id: 1,
@@ -50,660 +52,227 @@ export const catalogContent = {
   },
 };
 
-export type Door = {
-  id: number;
-  badge: "hit" | "new" | "quiet" | null;
-  rating: number;
-  url: string;
-  price: number;
-  type: "entrance" | "interior";
-  subtype: string;
-  slug: string;
+export type DoorSeries = {
+  purpose: string;
+  leafThicknessMm: number;
+  frameThicknessMm: number;
+  seals: number;
+  sealsDescription: string;
+  insulationLeaf: string;
+  insulationFrame: string;
+  // стальные двери
+  metalLeafMm?: number;
+  metalFrameMm?: number;
+  panelInsideMm?: number;
+  panelOutsideMm?: number;
+  thermalBreak?: boolean | string;
+  noiseDbMin?: number | null;
+  options?: string;
+  note?: string | null;
+  // «Хаски»
+  thermalBreakLeaf?: boolean | string;
+  thermalBreakFrame?: boolean;
+  thresholdSteelCover?: boolean;
+  glazing?: string;
+  source?: string;
+};
+
+export type DoorImage = {
+  image: string;
+  imageSize: number[];
+};
+
+export type DoorSide = DoorImage & {
+  pattern: string | null;
+  baguette: string | null;
+  raw: string;
+  material: string;
+  color: string | null;
+  colorCode: string | null;
+  texture: string | null;
+  patina: string | null;
+  insert: string | null;
+  stripe: string | null;
+  molding: string | null;
+  swatchHex: string;
+};
+
+export type DoorVariant = {
+  id: string;
+  catalogSeries: string | null;
+  availableSeries: string[];
+  outside: DoorSide;
+  inside: DoorSide;
+  frame: string;
+  trim: string | null;
+  portal: string | null;
+  decor: string | null;
+  window: string | null;
+  smartLock: string | null;
+  handles: { type: string; model: string; finish: string | null }[];
+  note: string | null;
+  sourcePage: number;
+};
+
+export type EntranceDoor = {
+  id: string;
   name: string;
+  kind: "entrance";
+  line: "steel" | "husky";
+  purpose: "apartment" | "house";
+  style: string;
+  description: string | null;
+  priceFrom: number;
+  inStock: boolean | null;
+  availableSeries: string[];
+  defaultSeries: string | null;
+  gallery: {
+    interior: DoorImage | null;
+    detail: DoorImage | null;
+  };
+  variants: DoorVariant[];
+  source: { file: string; page: number };
+};
+
+// Межкомнатных в doors.json пока нет — моковые данные.
+export type InteriorDoor = {
+  id: string;
+  name: string;
+  kind: "interior";
+  purpose: "swing" | "sliding" | "hidden";
   description: string;
-  categoryLabel?: string;
-  sheetThickness?: number;
-  lockClass?: number;
-  soundInsulation?: number;
-  material?: string;
-  hasGlass?: boolean;
-  colorDoor: {
-    color: string;
-    urlImg: string;
+  priceFrom: number;
+  material: string;
+  hasGlass: boolean;
+  variants: {
+    id: string;
+    outside: Pick<DoorSide, "image" | "swatchHex">;
   }[];
 };
 
-export const allDoors: Door[] = [
+export type Door = EntranceDoor | InteriorDoor;
+
+export const series: Record<string, DoorSeries> = doorsJson.series;
+
+const interiorVariants = (id: string, image: string, colors: string[]) =>
+  colors.map((swatchHex, index) => ({
+    id: `${id}-v${index + 1}`,
+    outside: { image, swatchHex },
+  }));
+
+const interiorDoors: InteriorDoor[] = [
   {
-    id: 1,
-    badge: "hit",
-    rating: 4.9,
-    url: "/images/doors/doorOne.png",
-    price: 1890,
-    type: "entrance",
-    subtype: "apartment",
-    slug: "granit",
-    name: "Гранит",
-    description: "Входная в квартиру",
-    sheetThickness: 1.5,
-    lockClass: 4,
-    soundInsulation: 42,
-    colorDoor: [
-      { color: "#303236", urlImg: "" },
-      { color: "#49382F", urlImg: "" },
-      { color: "#E5E2DC", urlImg: "" },
-      { color: "#795C49", urlImg: "" },
-    ],
-  },
-  {
-    id: 2,
-    badge: "new",
-    rating: 4.7,
-    url: "/images/doors/doorTwo.png",
-    price: 2150,
-    type: "entrance",
-    subtype: "apartment",
-    slug: "premier",
-    name: "Премьер",
-    description: "Входная в квартиру",
-    sheetThickness: 2.0,
-    lockClass: 4,
-    soundInsulation: 40,
-    colorDoor: [
-      { color: "#454545", urlImg: "" },
-      { color: "#F0EDE7", urlImg: "" },
-      { color: "#967653", urlImg: "" },
-    ],
-  },
-  {
-    id: 3,
-    badge: null,
-    rating: 4.5,
-    url: "/images/doors/doorThree.png",
-    price: 2350,
-    type: "entrance",
-    subtype: "apartment",
-    slug: "komfort",
-    name: "Комфорт",
-    description: "Входная в квартиру",
-    sheetThickness: 1.8,
-    lockClass: 4,
-    soundInsulation: 39,
-    colorDoor: [
-      { color: "#858585", urlImg: "" },
-      { color: "#795C49", urlImg: "" },
-      { color: "#49382F", urlImg: "" },
-    ],
-  },
-  {
-    id: 4,
-    badge: "quiet",
-    rating: 4.8,
-    url: "/images/doors/doorFour.png",
-    price: 2690,
-    type: "entrance",
-    subtype: "apartment",
-    slug: "premium",
-    name: "Премиум",
-    description: "Входная в квартиру",
-    sheetThickness: 2.0,
-    lockClass: 4,
-    soundInsulation: 45,
-    colorDoor: [
-      { color: "#303236", urlImg: "" },
-      { color: "#454545", urlImg: "" },
-      { color: "#F0EDE7", urlImg: "" },
-    ],
-  },
-  {
-    id: 5,
-    badge: null,
-    rating: 4.3,
-    url: "/images/doors/doorFive.png",
-    price: 1990,
-    type: "entrance",
-    subtype: "apartment",
-    slug: "line",
-    name: "Лайн",
-    description: "Входная в квартиру",
-    sheetThickness: 2.5,
-    lockClass: 3,
-    soundInsulation: 38,
-    colorDoor: [
-      { color: "#967653", urlImg: "" },
-      { color: "#795C49", urlImg: "" },
-      { color: "#858585", urlImg: "" },
-    ],
-  },
-  {
-    id: 6,
-    badge: "hit",
-    rating: 5.0,
-    url: "/images/doors/doorSix.png",
-    price: 2490,
-    type: "entrance",
-    subtype: "apartment",
-    slug: "standart",
-    name: "Стандарт",
-    description: "Входная в квартиру",
-    sheetThickness: 2.0,
-    lockClass: 4,
-    soundInsulation: 42,
-    colorDoor: [
-      { color: "#49382F", urlImg: "" },
-      { color: "#303236", urlImg: "" },
-      { color: "#F0EDE7", urlImg: "" },
-    ],
-  },
-  {
-    id: 7,
-    badge: "new",
-    rating: 4.6,
-    url: "/images/doors/doorSeven.png",
-    price: 2890,
-    type: "entrance",
-    subtype: "apartment",
-    slug: "neoklassika",
-    name: "Неоклассика",
-    description: "Входная в квартиру",
-    sheetThickness: 2.5,
-    lockClass: 4,
-    soundInsulation: 43,
-    colorDoor: [
-      { color: "#795C49", urlImg: "" },
-      { color: "#E5E2DC", urlImg: "" },
-      { color: "#454545", urlImg: "" },
-    ],
-  },
-  {
-    id: 8,
-    badge: null,
-    rating: 4.2,
-    url: "/images/doors/doorEight.png",
-    price: 2290,
-    type: "entrance",
-    subtype: "apartment",
-    slug: "modern",
-    name: "Модерн",
-    description: "Входная в квартиру",
-    sheetThickness: 2.5,
-    lockClass: 3,
-    soundInsulation: 40,
-    colorDoor: [
-      { color: "#858585", urlImg: "" },
-      { color: "#967653", urlImg: "" },
-      { color: "#303236", urlImg: "" },
-    ],
-  },
-  {
-    id: 9,
-    badge: "quiet",
-    rating: 4.9,
-    url: "/images/doors/doorOne.png",
-    price: 3190,
-    type: "entrance",
-    subtype: "apartment",
-    slug: "akustik",
-    name: "Акустик",
-    description: "Входная в квартиру",
-    sheetThickness: 2.0,
-    lockClass: 4,
-    soundInsulation: 46,
-    colorDoor: [
-      { color: "#454545", urlImg: "" },
-      { color: "#49382F", urlImg: "" },
-      { color: "#795C49", urlImg: "" },
-    ],
-  },
-  {
-    id: 10,
-    badge: "hit",
-    rating: 4.8,
-    url: "/images/doors/doorTwo.png",
-    price: 2490,
-    type: "entrance",
-    subtype: "house",
-    slug: "bastion",
-    name: "Бастион",
-    description: "Входная в дом",
-    sheetThickness: 2.0,
-    lockClass: 3,
-    soundInsulation: 41,
-    colorDoor: [
-      { color: "#303236", urlImg: "" },
-      { color: "#49382F", urlImg: "" },
-      { color: "#A68A6A", urlImg: "" },
-    ],
-  },
-  {
-    id: 11,
-    badge: "new",
-    rating: 4.5,
-    url: "/images/doors/doorThree.png",
-    price: 2890,
-    type: "entrance",
-    subtype: "house",
-    slug: "termo",
-    name: "Термо",
-    description: "Входная в дом",
-    sheetThickness: 2.0,
-    lockClass: 4,
-    soundInsulation: 43,
-    colorDoor: [
-      { color: "#454545", urlImg: "" },
-      { color: "#795C49", urlImg: "" },
-      { color: "#E5E2DC", urlImg: "" },
-    ],
-  },
-  {
-    id: 12,
-    badge: null,
-    rating: 4.4,
-    url: "/images/doors/doorFour.png",
-    price: 3190,
-    type: "entrance",
-    subtype: "house",
-    slug: "teplodom",
-    name: "ТеплоДом",
-    description: "Входная в дом",
-    sheetThickness: 2.5,
-    lockClass: 4,
-    soundInsulation: 44,
-    colorDoor: [
-      { color: "#303236", urlImg: "" },
-      { color: "#967653", urlImg: "" },
-      { color: "#858585", urlImg: "" },
-    ],
-  },
-  {
-    id: 13,
-    badge: "quiet",
-    rating: 5.0,
-    url: "/images/doors/doorFive.png",
-    price: 3590,
-    type: "entrance",
-    subtype: "house",
-    slug: "titan",
-    name: "Титан",
-    description: "Входная в дом",
-    sheetThickness: 2.5,
-    lockClass: 4,
-    soundInsulation: 46,
-    colorDoor: [
-      { color: "#49382F", urlImg: "" },
-      { color: "#303236", urlImg: "" },
-      { color: "#795C49", urlImg: "" },
-    ],
-  },
-  {
-    id: 14,
-    badge: null,
-    rating: 4.1,
-    url: "/images/doors/doorSix.png",
-    price: 2790,
-    type: "entrance",
-    subtype: "house",
-    slug: "sibir",
-    name: "Сибирь",
-    description: "Входная в дом",
-    sheetThickness: 2.0,
-    lockClass: 3,
-    soundInsulation: 42,
-    colorDoor: [
-      { color: "#858585", urlImg: "" },
-      { color: "#A68A6A", urlImg: "" },
-      { color: "#454545", urlImg: "" },
-    ],
-  },
-  {
-    id: 15,
-    badge: "hit",
-    rating: 4.7,
-    url: "/images/doors/doorSeven.png",
-    price: 3390,
-    type: "entrance",
-    subtype: "house",
-    slug: "garant",
-    name: "Гарант",
-    description: "Входная в дом",
-    sheetThickness: 2.0,
-    lockClass: 4,
-    soundInsulation: 45,
-    colorDoor: [
-      { color: "#303236", urlImg: "" },
-      { color: "#E5E2DC", urlImg: "" },
-      { color: "#49382F", urlImg: "" },
-    ],
-  },
-  {
-    id: 16,
-    badge: "new",
-    rating: 4.6,
-    url: "/images/doors/doorEight.png",
-    price: 3890,
-    type: "entrance",
-    subtype: "house",
-    slug: "termolux",
-    name: "Термолюкс",
-    description: "Входная в дом",
-    sheetThickness: 2.0,
-    lockClass: 4,
-    soundInsulation: 47,
-    colorDoor: [
-      { color: "#795C49", urlImg: "" },
-      { color: "#454545", urlImg: "" },
-      { color: "#303236", urlImg: "" },
-    ],
-  },
-  {
-    id: 17,
-    badge: "hit",
-    rating: 4.9,
-    url: "/images/doors/doorOne.png",
-    price: 390,
-    type: "interior",
-    subtype: "swing",
-    categoryLabel: "Межкомнатная",
-    slug: "kalcit",
+    id: "kalcit",
     name: "Кальцит",
+    kind: "interior",
+    purpose: "swing",
     description: "МДФ + массив · распашная · без стекла",
+    priceFrom: 390,
     material: "МДФ на каркасе из массива",
     hasGlass: false,
-    colorDoor: [
-      { color: "#F2F1ED", urlImg: "" },
-      { color: "#C9C9C3", urlImg: "" },
-      { color: "#E5DCCB", urlImg: "" },
-      { color: "#27292A", urlImg: "" },
-    ],
+    variants: interiorVariants("kalcit", "/images/doors/doorOne.png", [
+      "#F2F1ED",
+      "#C9C9C3",
+      "#E5DCCB",
+      "#27292A",
+    ]),
   },
   {
-    id: 18,
-    badge: "new",
-    rating: 4.6,
-    url: "/images/doors/doorTwo.png",
-    price: 450,
-    type: "interior",
-    subtype: "swing",
-    categoryLabel: "Межкомнатная",
-    slug: "alba",
+    id: "alba",
     name: "Альба",
+    kind: "interior",
+    purpose: "swing",
     description: "Массив · распашная · без стекла",
+    priceFrom: 450,
     material: "МДФ на каркасе из массива",
     hasGlass: false,
-    colorDoor: [
-      { color: "#F2F1ED", urlImg: "" },
-      { color: "#D8CBB8", urlImg: "" },
-      { color: "#967653", urlImg: "" },
-      { color: "#303236", urlImg: "" },
-    ],
+    variants: interiorVariants("alba", "/images/doors/doorTwo.png", [
+      "#F2F1ED",
+      "#D8CBB8",
+      "#967653",
+      "#303236",
+    ]),
   },
   {
-    id: 19,
-    badge: null,
-    rating: 4.3,
-    url: "/images/doors/doorThree.png",
-    price: 520,
-    type: "interior",
-    subtype: "swing",
-    categoryLabel: "Межкомнатная",
-    slug: "venecia",
+    id: "venecia",
     name: "Венеция",
+    kind: "interior",
+    purpose: "swing",
     description: "Массив · распашная · со стеклом",
+    priceFrom: 520,
     material: "МДФ на каркасе из массива",
     hasGlass: true,
-    colorDoor: [
-      { color: "#F2F1ED", urlImg: "" },
-      { color: "#E5DCCB", urlImg: "" },
-      { color: "#795C49", urlImg: "" },
-      { color: "#454545", urlImg: "" },
-    ],
+    variants: interiorVariants("venecia", "/images/doors/doorThree.png", [
+      "#F2F1ED",
+      "#E5DCCB",
+      "#795C49",
+      "#454545",
+    ]),
   },
   {
-    id: 20,
-    badge: "hit",
-    rating: 4.8,
-    url: "/images/doors/doorFour.png",
-    price: 480,
-    type: "interior",
-    subtype: "swing",
-    categoryLabel: "Межкомнатная",
-    slug: "modern-interior",
+    id: "modern-interior",
     name: "Модерн",
+    kind: "interior",
+    purpose: "swing",
     description: "Массив · распашная · без стекла",
+    priceFrom: 480,
     material: "МДФ на каркасе из массива",
     hasGlass: false,
-    colorDoor: [
-      { color: "#C9C9C3", urlImg: "" },
-      { color: "#F2F1ED", urlImg: "" },
-      { color: "#49382F", urlImg: "" },
-      { color: "#303236", urlImg: "" },
-    ],
+    variants: interiorVariants("modern-interior", "/images/doors/doorFour.png", [
+      "#C9C9C3",
+      "#F2F1ED",
+      "#49382F",
+      "#303236",
+    ]),
   },
   {
-    id: 21,
-    badge: "new",
-    rating: 4.5,
-    url: "/images/doors/doorFive.png",
-    price: 590,
-    type: "interior",
-    subtype: "swing",
-    categoryLabel: "Межкомнатная",
-    slug: "verona",
+    id: "verona",
     name: "Верона",
+    kind: "interior",
+    purpose: "swing",
     description: "Массив · распашная · со стеклом",
+    priceFrom: 590,
     material: "Массив дуба",
     hasGlass: true,
-    colorDoor: [
-      { color: "#F2F1ED", urlImg: "" },
-      { color: "#D8CBB8", urlImg: "" },
-      { color: "#967653", urlImg: "" },
-      { color: "#27292A", urlImg: "" },
-    ],
+    variants: interiorVariants("verona", "/images/doors/doorFive.png", [
+      "#F2F1ED",
+      "#D8CBB8",
+      "#967653",
+      "#27292A",
+    ]),
   },
   {
-    id: 22,
-    badge: null,
-    rating: 4.4,
-    url: "/images/doors/doorSix.png",
-    price: 520,
-    type: "interior",
-    subtype: "sliding",
-    categoryLabel: "Межкомнатная",
-    slug: "tuf",
+    id: "tuf",
     name: "Туф",
+    kind: "interior",
+    purpose: "sliding",
     description: "МДФ + массив · раздвижная · со стеклом",
+    priceFrom: 520,
     material: "Массив дуба",
     hasGlass: true,
-    colorDoor: [
-      { color: "#A09F9A", urlImg: "" },
-      { color: "#E5E2DC", urlImg: "" },
-      { color: "#A68A6A", urlImg: "" },
-    ],
+    variants: interiorVariants("tuf", "/images/doors/doorSix.png", [
+      "#A09F9A",
+      "#E5E2DC",
+      "#A68A6A",
+    ]),
   },
   {
-    id: 23,
-    badge: "new",
-    rating: 4.7,
-    url: "/images/doors/doorSeven.png",
-    price: 690,
-    type: "interior",
-    subtype: "hidden",
-    categoryLabel: "Межкомнатная",
-    slug: "onyx",
+    id: "onyx",
     name: "Оникс",
+    kind: "interior",
+    purpose: "hidden",
     description: "МДФ + массив · скрытая · без стекла",
+    priceFrom: 690,
     material: "МДФ на каркасе из массива",
     hasGlass: false,
-    colorDoor: [
-      { color: "#F2F1ED", urlImg: "" },
-      { color: "#C9C9C3", urlImg: "" },
-    ],
+    variants: interiorVariants("onyx", "/images/doors/doorSeven.png", [
+      "#F2F1ED",
+      "#C9C9C3",
+    ]),
   },
 ];
 
-export const topApartDoors: Door[] = [
-  {
-    id: 1,
-    badge: "hit",
-    rating: 4.9,
-    url: "/images/doors/doorOne.png",
-    price: 1890,
-    type: "entrance",
-    subtype: "apartment",
-    slug: "granit",
-    name: "Гранит",
-    description: "Входная в квартиру",
-    sheetThickness: 2.0,
-    lockClass: 4,
-    soundInsulation: 42,
-    colorDoor: [
-      { color: "#303236", urlImg: "" },
-      { color: "#49382F", urlImg: "" },
-      { color: "#E5E2DC", urlImg: "" },
-      { color: "#795C49", urlImg: "" },
-    ],
-  },
-  {
-    id: 2,
-    badge: "new",
-    rating: 4.7,
-    url: "/images/doors/doorTwo.png",
-    price: 2150,
-    type: "entrance",
-    subtype: "apartment",
-    slug: "premier",
-    name: "Премьер",
-    description: "Входная в квартиру",
-    sheetThickness: 2.0,
-    lockClass: 4,
-    soundInsulation: 40,
-    colorDoor: [
-      { color: "#454545", urlImg: "" },
-      { color: "#F0EDE7", urlImg: "" },
-      { color: "#967653", urlImg: "" },
-    ],
-  },
-  {
-    id: 3,
-    badge: null,
-    rating: 4.5,
-    url: "/images/doors/doorThree.png",
-    price: 2350,
-    type: "entrance",
-    subtype: "apartment",
-    slug: "komfort",
-    name: "Комфорт",
-    description: "Входная в квартиру",
-    sheetThickness: 1.8,
-    lockClass: 4,
-    soundInsulation: 39,
-    colorDoor: [
-      { color: "#858585", urlImg: "" },
-      { color: "#795C49", urlImg: "" },
-      { color: "#49382F", urlImg: "" },
-    ],
-  },
-  {
-    id: 4,
-    badge: "quiet",
-    rating: 4.8,
-    url: "/images/doors/doorFour.png",
-    price: 2690,
-    type: "entrance",
-    subtype: "apartment",
-    slug: "premium",
-    name: "Премиум",
-    description: "Входная в квартиру",
-    sheetThickness: 2.0,
-    lockClass: 4,
-    soundInsulation: 45,
-    colorDoor: [
-      { color: "#303236", urlImg: "" },
-      { color: "#454545", urlImg: "" },
-      { color: "#F0EDE7", urlImg: "" },
-    ],
-  },
-];
-
-export const topHouseDoors: Door[] = [
-  {
-    id: 10,
-    badge: "hit",
-    rating: 4.8,
-    url: "/images/doors/doorFive.png",
-    price: 2490,
-    type: "entrance",
-    subtype: "house",
-    slug: "bastion",
-    name: "Бастион",
-    description: "Входная в дом",
-    sheetThickness: 2.0,
-    lockClass: 3,
-    soundInsulation: 41,
-    colorDoor: [
-      { color: "#303236", urlImg: "" },
-      { color: "#49382F", urlImg: "" },
-      { color: "#A68A6A", urlImg: "" },
-    ],
-  },
-  {
-    id: 11,
-    badge: "new",
-    rating: 4.5,
-    url: "/images/doors/doorSix.png",
-    price: 2890,
-    type: "entrance",
-    subtype: "house",
-    slug: "termo",
-    name: "Термо",
-    description: "Входная в дом",
-    sheetThickness: 2.0,
-    lockClass: 4,
-    soundInsulation: 43,
-    colorDoor: [
-      { color: "#454545", urlImg: "" },
-      { color: "#795C49", urlImg: "" },
-      { color: "#E5E2DC", urlImg: "" },
-    ],
-  },
-  {
-    id: 12,
-    badge: null,
-    rating: 4.4,
-    url: "/images/doors/doorSeven.png",
-    price: 3190,
-    type: "entrance",
-    subtype: "house",
-    slug: "teplodom",
-    name: "ТеплоДом",
-    description: "Входная в дом",
-    sheetThickness: 2.0,
-    lockClass: 4,
-    soundInsulation: 44,
-    colorDoor: [
-      { color: "#303236", urlImg: "" },
-      { color: "#967653", urlImg: "" },
-      { color: "#858585", urlImg: "" },
-    ],
-  },
-  {
-    id: 13,
-    badge: "quiet",
-    rating: 5.0,
-    url: "/images/doors/doorEight.png",
-    price: 3590,
-    type: "entrance",
-    subtype: "house",
-    slug: "titan",
-    name: "Титан",
-    description: "Входная в дом",
-    sheetThickness: 2.0,
-    lockClass: 4,
-    soundInsulation: 46,
-    colorDoor: [
-      { color: "#49382F", urlImg: "" },
-      { color: "#303236", urlImg: "" },
-      { color: "#795C49", urlImg: "" },
-    ],
-  },
+export const allDoors: Door[] = [
+  ...(doorsJson.doors as EntranceDoor[]),
+  ...interiorDoors,
 ];

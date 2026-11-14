@@ -3,8 +3,8 @@ import type { Door } from "@/data/data";
 import { doorColors, priceStatic } from "@/data/dataFilters";
 
 type ActiveFilter = {
-  type: Door["type"];
-  subtype: Door["subtype"] | null;
+  type: Door["kind"];
+  subtype: Door["purpose"] | null;
 };
 
 type CurrentColor = {
@@ -24,8 +24,8 @@ type ActiveFiltersProps = {
 
   handlers: {
     handleFilterChange: (
-      type: Door["type"],
-      subtype: Door["subtype"] | null,
+      type: Door["kind"],
+      subtype: Door["purpose"] | null,
     ) => void;
     handleSheetThicknessChange: (value: number) => void;
     handleMaterialChange: (value: string) => void;

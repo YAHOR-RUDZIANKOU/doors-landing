@@ -2,13 +2,13 @@ import type { Door } from "@/data/data";
 
 type allFilters = {
   label: string;
-  type: "entrance" | "interior";
-  subtype: string | null;
+  type: Door["kind"];
+  subtype: Door["purpose"] | null;
 };
 
 export type ActiveFilter = {
-  type: Door["type"];
-  subtype: Door["subtype"] | null;
+  type: Door["kind"];
+  subtype: Door["purpose"] | null;
 };
 
 export const entranceFilters: allFilters[] = [
@@ -35,22 +35,18 @@ export const priceStatic = {
   },
 };
 
-export const sheetThicknessOptions = [
-  { value: 1.5 },
-  { value: 1.8 },
-  { value: 2.0 },
-  { value: 2.5 },
-];
+export const sheetThicknessOptions = [{ value: 1.2 }, { value: 1.5 }];
 
+// Группы оттенков: вариант двери попадает в группу по swatchHex (см. getColorGroupId).
 export const doorColors = [
-  { id: 1, color: "#303236", name: "Графит" },
-  { id: 2, color: "#49382F", name: "Шоколад" },
-  { id: 3, color: "#E5E2DC", name: "Слоновая кость" },
-  { id: 4, color: "#795C49", name: "Каштан" },
-  { id: 5, color: "#454545", name: "Серый" },
-  { id: 6, color: "#F0EDE7", name: "Молочный" },
-  { id: 7, color: "#967653", name: "Дуб" },
-  { id: 8, color: "#858585", name: "Серебро" },
+  { id: 1, color: "#EDEDED", name: "Белый" },
+  { id: 2, color: "#E5DCCB", name: "Слоновая кость" },
+  { id: 3, color: "#9A9792", name: "Серый" },
+  { id: 4, color: "#3D3E42", name: "Графит" },
+  { id: 5, color: "#6B4E36", name: "Коричневый" },
+  { id: 6, color: "#5A2E2A", name: "Гранат" },
+  { id: 7, color: "#2F4A3A", name: "Зелёный" },
+  { id: 8, color: "#46627F", name: "Синий" },
 ];
 
 export const materialFilters = [
@@ -64,7 +60,6 @@ export const glassFilters = [
 ];
 
 export const sortOptions = [
-  { value: "rating", label: "Сначала популярные" },
   { value: "rich", label: "Сначала дороже" },
   { value: "cheap", label: "Сначала дешевле" },
 ];

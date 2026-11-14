@@ -1,13 +1,9 @@
 import type { Door } from "@/data/data";
-
-type currentColorsProps = {
-  color: string;
-  name: string;
-};
+import { getColorGroupId, getDoorSeries } from "@/utils/doorUtils";
 
 type ActiveFilter = {
-  type: Door["type"];
-  subtype: Door["subtype"] | null;
+  type: Door["kind"];
+  subtype: Door["purpose"] | null;
 };
 
 type IgnoreFilter = "sheetThickness" | "color" | "material" | "glass" | null;
@@ -20,7 +16,6 @@ type UseDoorFiltersProps = {
   selectedColorIds: number[];
   selectedMaterials: string[];
   selectedGlass: boolean[];
-  currentColors: currentColorsProps[];
 };
 
 const useDoorFilters = ({
@@ -31,29 +26,30 @@ const useDoorFilters = ({
   selectedColorIds,
   selectedMaterials,
   selectedGlass,
-  currentColors,
 }: UseDoorFiltersProps) => {
   const filterDoors = (ignoreFilter: IgnoreFilter = null) => {
     return allDoors.filter((card) => {
-      if (activeFilter.type !== card.type) return false;
+      if (activeFilter.type !== card.kind) return false;
 
-      if (activeFilter.subtype && activeFilter.subtype !== card.subtype)
+      if (activeFilter.subtype && activeFilter.subtype !== card.purpose)
         return false;
 
-      if (priceRange[0] > card.price) return false;
-      if (priceRange[1] < card.price) return false;
+      if (priceRange[0] > card.priceFrom) return false;
+      if (priceRange[1] < card.priceFrom) return false;
+
+      const sheetThickness = getDoorSeries(card)?.metalLeafMm;
 
       if (
         ignoreFilter !== "sheetThickness" &&
-        card.sheetThickness &&
+        card.kind === "entrance" &&
         selectedSheetThickness.length !== 0 &&
-        !selectedSheetThickness.includes(card.sheetThickness)
+        (!sheetThickness || !selectedSheetThickness.includes(sheetThickness))
       )
         return false;
 
       if (ignoreFilter !== "color" && selectedColorIds.length !== 0) {
-        const resultColor = card.colorDoor.some((colorItem) =>
-          currentColors.some((value) => value.color === colorItem.color),
+        const resultColor = card.variants.some((variant) =>
+          selectedColorIds.includes(getColorGroupId(variant.outside.swatchHex)),
         );
 
         if (!resultColor) return false;
@@ -61,7 +57,7 @@ const useDoorFilters = ({
 
       if (
         ignoreFilter !== "material" &&
-        card.material &&
+        card.kind === "interior" &&
         selectedMaterials.length !== 0
       ) {
         if (!selectedMaterials.includes(card.material)) return false;
@@ -69,7 +65,7 @@ const useDoorFilters = ({
 
       if (
         ignoreFilter !== "glass" &&
-        card.hasGlass !== undefined &&
+        card.kind === "interior" &&
         selectedGlass.length !== 0
       ) {
         if (!selectedGlass.includes(card.hasGlass)) return false;

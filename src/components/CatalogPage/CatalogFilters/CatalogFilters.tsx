@@ -18,7 +18,7 @@ import { sheetThicknessOptions } from "@/data/dataFilters";
 import { doorColors } from "@/data/dataFilters";
 import { materialFilters } from "@/data/dataFilters";
 import { glassFilters } from "@/data/dataFilters";
-import { getCount } from "@/utils/doorUtils";
+import { getColorGroupId, getCount, getDoorSeries } from "@/utils/doorUtils";
 import type { ActiveFilter } from "@/data/dataFilters";
 import type { Door } from "@/data/data";
 import { priceStatic } from "@/data/dataFilters";
@@ -32,8 +32,8 @@ type CatalogFiltersProps = {
   selectedGlass: boolean[];
 
   handleFilterChange: (
-    type: Door["type"],
-    subtype: Door["subtype"] | null,
+    type: Door["kind"],
+    subtype: Door["purpose"] | null,
   ) => void;
 
   handleSheetThicknessChange: (value: number) => void;
@@ -131,7 +131,8 @@ const CatalogFilters = ({
             {sheetThicknessOptions.map((item) => {
               const count = getCount({
                 allDoors: sheetThicknessCountCards,
-                predicate: (door) => door.sheetThickness === item.value,
+                predicate: (door) =>
+                  getDoorSeries(door)?.metalLeafMm === item.value,
               });
 
               return (
@@ -159,7 +160,8 @@ const CatalogFilters = ({
               {materialFilters.map((item) => {
                 const count = getCount({
                   allDoors: materialCountCards,
-                  predicate: (door) => door.material === item.value,
+                  predicate: (door) =>
+                    door.kind === "interior" && door.material === item.value,
                 });
 
                 return (
@@ -189,7 +191,8 @@ const CatalogFilters = ({
               {glassFilters.map((item) => {
                 const count = getCount({
                   allDoors: glassCountCards,
-                  predicate: (door) => door.hasGlass === item.value,
+                  predicate: (door) =>
+                    door.kind === "interior" && door.hasGlass === item.value,
                 });
 
                 return (
@@ -219,8 +222,9 @@ const CatalogFilters = ({
             const isDisabled =
               !isActive &&
               !colorCountCards.some((card) =>
-                card.colorDoor.some(
-                  (colorItem) => colorItem.color === item.color,
+                card.variants.some(
+                  (variant) =>
+                    getColorGroupId(variant.outside.swatchHex) === item.id,
                 ),
               );
 

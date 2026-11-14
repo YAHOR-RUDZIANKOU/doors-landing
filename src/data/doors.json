@@ -1,7 +1,7 @@
 {
   "meta": {
     "source": "Каталоги и гиды «Стальная линия» (docs/)",
-    "note": "swatchHex — медиана цвета с фото, приблизительно. null — в материалах нет данных."
+    "note": "swatchHex — медиана цвета с фото, приблизительно. null — в материалах нет данных. priceFrom — временные цены-заглушки, не от заказчика."
   },
   "series": {
     "73": {
@@ -325,7 +325,7 @@
       "purpose": "apartment",
       "style": "modern",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 1890,
       "inStock": null,
       "availableSeries": [
         "73",
@@ -610,7 +610,7 @@
       "purpose": "apartment",
       "style": "modern",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 2150,
       "inStock": null,
       "availableSeries": [
         "73",
@@ -896,7 +896,7 @@
       "purpose": "apartment",
       "style": "modern",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 2350,
       "inStock": null,
       "availableSeries": [
         "73",
@@ -1182,7 +1182,7 @@
       "purpose": "apartment",
       "style": "modern",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 2690,
       "inStock": null,
       "availableSeries": [
         "73",
@@ -1461,7 +1461,7 @@
       "purpose": "apartment",
       "style": "neoclassic",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 1990,
       "inStock": null,
       "availableSeries": [
         "73",
@@ -1627,7 +1627,7 @@
       "purpose": "apartment",
       "style": "neoclassic",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 2490,
       "inStock": null,
       "availableSeries": [
         "73",
@@ -1911,7 +1911,7 @@
       "purpose": "apartment",
       "style": "classic",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 2890,
       "inStock": null,
       "availableSeries": [
         "73",
@@ -2076,7 +2076,7 @@
       "purpose": "house",
       "style": "modern",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 2490,
       "inStock": null,
       "availableSeries": [
         "73У",
@@ -2254,7 +2254,7 @@
       "purpose": "house",
       "style": "modern",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 2890,
       "inStock": null,
       "availableSeries": [
         "73У",
@@ -2417,7 +2417,7 @@
       "purpose": "house",
       "style": "neoclassic",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 2790,
       "inStock": null,
       "availableSeries": [
         "73У",
@@ -2586,7 +2586,7 @@
       "purpose": "house",
       "style": "classic",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 3190,
       "inStock": null,
       "availableSeries": [
         "73У",
@@ -2759,7 +2759,7 @@
       "purpose": "house",
       "style": "with-window",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 3390,
       "inStock": null,
       "availableSeries": [
         "82У",
@@ -3060,7 +3060,7 @@
       "purpose": "house",
       "style": "modern",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 3290,
       "inStock": null,
       "availableSeries": [
         "Хаски Light",
@@ -3230,7 +3230,7 @@
       "purpose": "house",
       "style": "modern",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 3590,
       "inStock": null,
       "availableSeries": [
         "Хаски A",
@@ -3510,7 +3510,7 @@
       "purpose": "house",
       "style": "modern",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 3490,
       "inStock": null,
       "availableSeries": [
         "Хаски A",
@@ -3795,7 +3795,7 @@
       "purpose": "house",
       "style": "classic",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 3690,
       "inStock": null,
       "availableSeries": [
         "Хаски A",
@@ -4076,7 +4076,7 @@
       "purpose": "house",
       "style": "classic",
       "description": null,
-      "priceFrom": null,
+      "priceFrom": 3890,
       "inStock": null,
       "availableSeries": [
         "Хаски A",

@@ -26,10 +26,10 @@ import useDoorFilters from "@/hook/useDoorFilters";
 import ActiveFilters from "./ActiveFilters/ActiveFilters";
 import CatalogHero from "./CatalogHero/CatalogHero";
 
-type SortBy = "rating" | "rich" | "cheap";
+type SortBy = "rich" | "cheap";
 
 const CatalogPage = () => {
-  const [sortBy, setSortBy] = useState<SortBy>("rating");
+  const [sortBy, setSortBy] = useState<SortBy>("cheap");
   const [activeFilter, setActiveFilter] = useState<ActiveFilter>({
     type: "entrance",
     subtype: null,
@@ -47,8 +47,8 @@ const CatalogPage = () => {
   const [selectedGlass, setSelectedGlass] = useState<boolean[]>([]);
 
   const handleFilterChange = (
-    type: Door["type"],
-    subtype: Door["subtype"] | null,
+    type: Door["kind"],
+    subtype: Door["purpose"] | null,
   ) => {
     if (type !== activeFilter.type) {
       setPriceRange([priceStatic[type].min, priceStatic[type].max]);
@@ -110,17 +110,14 @@ const CatalogPage = () => {
     selectedColorIds,
     selectedMaterials,
     selectedGlass,
-    currentColors,
   });
 
   const getSortedCards = () => {
     const sortedCards = [...resultCards];
-    if (sortBy === "rating") {
-      sortedCards.sort((a, b) => b.rating - a.rating);
-    } else if (sortBy === "rich") {
-      sortedCards.sort((a, b) => b.price - a.price);
+    if (sortBy === "rich") {
+      sortedCards.sort((a, b) => b.priceFrom - a.priceFrom);
     } else if (sortBy === "cheap") {
-      sortedCards.sort((a, b) => a.price - b.price);
+      sortedCards.sort((a, b) => a.priceFrom - b.priceFrom);
     }
     return sortedCards;
   };

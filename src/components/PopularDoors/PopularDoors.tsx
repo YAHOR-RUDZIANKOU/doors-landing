@@ -12,8 +12,8 @@ import {
   Title,
 } from "@/ui-kit";
 import { useState } from "react";
-import { topApartDoors } from "@/data/data";
-import { topHouseDoors } from "@/data/data";
+import { allDoors } from "@/data/data";
+import { getDoorCount, getWordForm } from "@/utils/doorUtils";
 import DoorCard from "../DoorCard/DoorCard";
 import { ROUTES } from "@/navigation";
 
@@ -26,9 +26,14 @@ const categoryOptions: { value: Category; label: string }[] = [
 
 const PopularDoors = () => {
   const [activeCategory, setActiveCategory] = useState<Category>("apartment");
-  const visibleDoors = [...topApartDoors, ...topHouseDoors].filter(
-    (door) => door.subtype === activeCategory,
-  );
+  const visibleDoors = allDoors
+    .filter((door) => door.purpose === activeCategory)
+    .slice(0, 4);
+  const entranceCount = getDoorCount({
+    allDoors,
+    type: "entrance",
+    subtype: null,
+  });
   return (
     <Section tone="subtle">
       <Container>
@@ -54,7 +59,8 @@ const PopularDoors = () => {
           </SimpleGrid>
 
           <Link href={ROUTES.catalog} tone="accent" fz="lg" fw={600}>
-            Все входные - 16 моделей -&gt;
+            Все входные - {entranceCount}{" "}
+            {getWordForm(entranceCount, ["модель", "модели", "моделей"])} -&gt;
           </Link>
         </Stack>
       </Container>

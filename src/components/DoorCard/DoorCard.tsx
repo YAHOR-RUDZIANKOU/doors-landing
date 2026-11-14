@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import {
-  Badge,
   Card,
   ColorSwatchButton,
   Group,
@@ -13,19 +12,20 @@ import {
 } from "@/ui-kit";
 import { getDoorRoute } from "@/navigation";
 import type { Door } from "@/data/data";
+import { getDoorSeries } from "@/utils/doorUtils";
 
 type DoorCardProps = {
   door: Door;
 };
 
 const DoorCard = ({ door }: DoorCardProps) => {
-  const [activeColor, setActiveColor] = useState(0);
+  const [activeVariant, setActiveVariant] = useState(0);
 
-  const selectedColor = door.colorDoor[activeColor];
-  const imageUrl = selectedColor?.urlImg || door.url;
+  const imageUrl = door.variants[activeVariant].outside.image;
 
-  const isEntrance = door.type === "entrance";
-  const doorRoute = getDoorRoute(door.slug);
+  const isEntrance = door.kind === "entrance";
+  const doorRoute = getDoorRoute(door.id);
+  const doorSeries = getDoorSeries(door);
 
   return (
     <Stack gap="xs">
@@ -34,18 +34,17 @@ const DoorCard = ({ door }: DoorCardProps) => {
         ratio={0.9}
         href={doorRoute}
         linkLabel={door.name}
-        topLeft={door.badge && <Badge>{door.badge}</Badge>}
         bottomLeft={
           <Group gap="xs">
-            {door.colorDoor.map((item, index) => (
+            {door.variants.map((item, index) => (
               <ColorSwatchButton
-                key={item.color}
-                color={item.color}
+                key={item.id}
+                color={item.outside.swatchHex}
                 size={20}
                 withBorder
-                selected={activeColor === index}
-                onClick={() => setActiveColor(index)}
-                aria-label={`Выбрать цвет ${item.color}`}
+                selected={activeVariant === index}
+                onClick={() => setActiveVariant(index)}
+                aria-label={`Выбрать цвет ${item.outside.swatchHex}`}
               />
             ))}
           </Group>
@@ -60,7 +59,7 @@ const DoorCard = ({ door }: DoorCardProps) => {
       </Card>
 
       <Text fz="xl" fw={700}>
-        от {door.price.toLocaleString("ru-RU")} BYN{" "}
+        от {door.priceFrom.toLocaleString("ru-RU")} BYN{" "}
         {!isEntrance && (
           <Text span tone="muted" fz="sm" fw={400}>
             за комплект
@@ -69,7 +68,11 @@ const DoorCard = ({ door }: DoorCardProps) => {
       </Text>
 
       <Text tone="muted" truncate>
-        {isEntrance ? door.description : door.categoryLabel}{" "}
+        {isEntrance
+          ? door.purpose === "apartment"
+            ? "Входная в квартиру"
+            : "Входная в дом"
+          : "Межкомнатная"}{" "}
         <Link href={doorRoute} fw={500}>
           {door.name}
         </Link>
@@ -77,7 +80,13 @@ const DoorCard = ({ door }: DoorCardProps) => {
 
       <Text tone="muted" fz="sm">
         {isEntrance
-          ? `лист ${door.sheetThickness} мм · замки кл. ${door.lockClass} · -${door.soundInsulation} дБ`
+          ? [
+              doorSeries?.metalLeafMm && `лист ${doorSeries.metalLeafMm} мм`,
+              `полотно ${doorSeries?.leafThicknessMm} мм`,
+              doorSeries?.noiseDbMin && `-${doorSeries.noiseDbMin} дБ`,
+            ]
+              .filter(Boolean)
+              .join(" · ")
           : door.description}
       </Text>
     </Stack>

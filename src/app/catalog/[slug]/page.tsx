@@ -10,7 +10,7 @@ type PageProps = {
 
 const page = async ({ params }: PageProps) => {
   const { slug } = await params;
-  const currentDoor = allDoors.find((card) => card.slug === slug);
+  const currentDoor = allDoors.find((card) => card.id === slug);
   if (!currentDoor) {
     notFound();
   }
