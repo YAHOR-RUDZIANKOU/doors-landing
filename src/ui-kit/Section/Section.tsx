@@ -1,6 +1,8 @@
-import { Box, type BoxProps } from "@mantine/core";
+import { Box, type BoxProps, type ElementProps } from "@mantine/core";
 
-export interface SectionProps extends Omit<BoxProps, "bg"> {
+export interface SectionProps
+  extends Omit<BoxProps, "bg">,
+    ElementProps<"section"> {
   children?: React.ReactNode;
   tone?: "default" | "subtle";
 }

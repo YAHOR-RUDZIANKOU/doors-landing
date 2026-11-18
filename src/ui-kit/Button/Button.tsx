@@ -6,12 +6,17 @@ import {
   type ElementProps,
 } from "@mantine/core";
 
-export type ButtonVariant = "filled" | "primary" | "secondary" | "text";
+export type ButtonVariant =
+  | "filled"
+  | "primary"
+  | "accent"
+  | "secondary"
+  | "text";
 
 export interface ButtonProps
   extends Omit<MantineButtonProps, "variant">,
     ElementProps<"button", keyof MantineButtonProps> {
-  /** filled — основное действие формы, primary — акцентная, secondary — контурная, text — как ссылка */
+  /** filled — основное действие формы, primary — акцентная, accent — тёмно-оранжевая с белым текстом, secondary — контурная, text — как ссылка */
   variant?: ButtonVariant;
 }
 

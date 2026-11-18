@@ -1,6 +1,6 @@
 "use client";
 
-import { Modal, Title } from "@/ui-kit";
+import { Modal } from "@/ui-kit";
 import Form from "./Form";
 
 type ConsultationFormProps = {
@@ -19,7 +19,14 @@ const ConsultationForm = ({
       opened={opened}
       onClose={onClose}
       size="lg"
-      title={<Title order={2}>Связаться со специалистом</Title>}
+      title="Связаться со специалистом"
+      styles={{
+        title: {
+          fontSize: "var(--mantine-h2-font-size)",
+          fontWeight: "var(--mantine-h2-font-weight)",
+          lineHeight: "var(--mantine-h2-line-height)",
+        },
+      }}
       closeButtonProps={{ "aria-label": "Закрыть форму" }}
     >
       <Form requestText={requestText} />

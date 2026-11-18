@@ -1,4 +1,5 @@
 import doorsJson from "./doors.json";
+import { Ruler, ShieldCheck, Truck } from "lucide-react";
 
 export const designCards = [
   {
@@ -60,12 +61,12 @@ export type DoorSeries = {
   sealsDescription: string;
   insulationLeaf: string;
   insulationFrame: string;
+  thermalBreak: boolean | "optional";
   // стальные двери
   metalLeafMm?: number;
   metalFrameMm?: number;
   panelInsideMm?: number;
   panelOutsideMm?: number;
-  thermalBreak?: boolean | string;
   noiseDbMin?: number | null;
   options?: string;
   note?: string | null;
@@ -152,7 +153,7 @@ export type InteriorDoor = {
 
 export type Door = EntranceDoor | InteriorDoor;
 
-export const series: Record<string, DoorSeries> = doorsJson.series;
+export const series = doorsJson.series as Record<string, DoorSeries>;
 
 const interiorVariants = (id: string, image: string, colors: string[]) =>
   colors.map((swatchHex, index) => ({
@@ -276,3 +277,30 @@ export const allDoors: Door[] = [
   ...(doorsJson.doors as EntranceDoor[]),
   ...interiorDoors,
 ];
+
+export const doorBenefits = [
+  {
+    id: 1,
+    icon: ShieldCheck,
+    title: "Гарантия 5 лет",
+    text: "на полотно и коробку",
+  },
+  {
+    id: 2,
+    icon: Truck,
+    title: "Доставка и монтаж",
+    text: "за один день, старую дверь вывезем",
+  },
+  {
+    id: 3,
+    icon: Ruler,
+    title: "Под ваш размер",
+    text: "делаем под заказ от 14 дней",
+  },
+];
+
+// Размеры входных дверей. Пока пустые — на странице эти строки не выводятся.
+export const entranceSizes = {
+  standard: "",
+  custom: "",
+};

@@ -48,6 +48,13 @@ const variantColorResolver: VariantColorsResolver = (input) => {
         color: ink[9],
         border: noBorder,
       };
+    case "accent":
+      return {
+        background: brand[7],
+        hover: brand[8],
+        color: theme.white,
+        border: noBorder,
+      };
     case "secondary":
       return {
         background: "transparent",

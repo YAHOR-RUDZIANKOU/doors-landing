@@ -6,18 +6,25 @@ import ConsultationForm from "../ConsultationForm/ConsultationForm";
 
 type ContactButtonProps = {
   title: string;
-  variant: "primary" | "secondary" | "text";
+  variant: "primary" | "accent" | "secondary" | "text";
   requestText?: string | null;
+  fullWidth?: boolean;
 };
 
-const ContactButton = ({ title, variant, requestText }: ContactButtonProps) => {
+const ContactButton = ({
+  title,
+  variant,
+  requestText,
+  fullWidth,
+}: ContactButtonProps) => {
   const [opened, { open, close }] = useDisclosure(false);
 
   return (
     <>
       <Button
         variant={variant}
-        size={variant === "primary" ? "lg" : "md"}
+        size={variant === "primary" || variant === "accent" ? "lg" : "md"}
+        fullWidth={fullWidth}
         onClick={open}
       >
         {title}

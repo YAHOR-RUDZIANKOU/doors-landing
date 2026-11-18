@@ -1,5 +1,5 @@
-import { series } from "@/data/data";
-import type { Door } from "@/data/data";
+import { entranceSizes, series } from "@/data/data";
+import type { Door, EntranceDoor } from "@/data/data";
 
 type allDoorColor = {
   id: number;
@@ -38,6 +38,103 @@ export const getDoorSeries = (door: Door) =>
   door.kind === "entrance"
     ? series[door.defaultSeries ?? door.availableSeries[0]]
     : undefined;
+
+export const purposeLabels: Record<Door["purpose"], string> = {
+  apartment: "для квартиры",
+  house: "для дома",
+  swing: "распашная",
+  sliding: "раздвижная",
+  hidden: "скрытая",
+};
+
+type SpecRow = [string, string | null | undefined];
+
+const withValues = (rows: SpecRow[]) =>
+  rows.filter((row): row is [string, string] => Boolean(row[1]));
+
+const formatSheetMm = (mm?: number) =>
+  mm ? `${mm.toLocaleString("ru-RU", { minimumFractionDigits: 1 })} мм` : null;
+
+const formatNoise = (db?: number | null) => (db ? `−${db} дБ` : null);
+
+const formatThermalBreak = (value: boolean | "optional") =>
+  value === "optional" ? "по комплектации" : value ? "есть" : "нет";
+
+// Значения без повторов через запятую.
+const joinUnique = (values: (string | null)[]) =>
+  [...new Set(values.filter(Boolean))].join(", ");
+
+export const getSpecs = (door: Door): [string, string][] => {
+  if (door.kind === "interior") {
+    return [
+      ["Материал", door.material],
+      ["Открывание", purposeLabels[door.purpose]],
+      ["Стекло", door.hasGlass ? "есть" : "нет"],
+    ];
+  }
+
+  const series = getDoorSeries(door);
+  if (!series) return [];
+
+  return withValues([
+    ["Наружный лист", formatSheetMm(series.metalLeafMm)],
+    ["Толщина полотна", `${series.leafThicknessMm} мм`],
+    ["Шумоизоляция", formatNoise(series.noiseDbMin)],
+    ["Утеплитель", series.insulationLeaf],
+    ["Терморазрыв", formatThermalBreak(series.thermalBreak)],
+  ]);
+};
+
+export const getSpecGroups = (door: EntranceDoor) => {
+  const series = getDoorSeries(door);
+  if (!series) return [];
+
+  const { variants } = door;
+
+  const groups = [
+    {
+      title: "Полотно",
+      rows: withValues([
+        ["Наружный лист", formatSheetMm(series.metalLeafMm)],
+        ["Лист коробки", formatSheetMm(series.metalFrameMm)],
+        ["Толщина полотна", `${series.leafThicknessMm} мм`],
+        ["Толщина коробки", `${series.frameThicknessMm} мм`],
+        ["Стандартные размеры", entranceSizes.standard],
+        ["Под заказ", entranceSizes.custom],
+      ]),
+    },
+    {
+      title: "Тепло и звук",
+      rows: withValues([
+        ["Утеплитель", series.insulationLeaf],
+        ["Утеплитель коробки", series.insulationFrame],
+        ["Шумоизоляция", formatNoise(series.noiseDbMin)],
+        ["Контуры уплотнения", String(series.seals)],
+        ["Терморазрыв", formatThermalBreak(series.thermalBreak)],
+      ]),
+    },
+    {
+      title: "Фурнитура",
+      rows: withValues([
+        [
+          "Ручки",
+          joinUnique(variants.flatMap((v) => v.handles.map((h) => h.model))),
+        ],
+        ["Умный замок", joinUnique(variants.map((v) => v.smartLock))],
+      ]),
+    },
+    {
+      title: "Отделка",
+      rows: withValues([
+        ["Снаружи", joinUnique(variants.map((v) => v.outside.material))],
+        ["Внутри", joinUnique(variants.map((v) => v.inside.material))],
+        ["Цвета", joinUnique(variants.map((v) => v.outside.color))],
+      ]),
+    },
+  ];
+
+  return groups.filter((group) => group.rows.length > 0);
+};
 
 // Возвращает id группы оттенков из doorColors по hex-цвету.
 export const getColorGroupId = (hex: string) => {
@@ -87,3 +184,6 @@ export const getWordForm = (
 
   return words[2];
 };
+
+// Платёж в месяц при рассрочке на 24 месяца, округлён вверх.
+export const getMonthlyPayment = (price: number) => Math.ceil(price / 24);

@@ -1,0 +1,10 @@
+/* Скрываем полосу прокрутки страницы и модальных окон, прокрутка при этом работает. */
+html,
+.mantine-Modal-content {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+.mantine-Modal-content::-webkit-scrollbar {
+  display: none;
+}
